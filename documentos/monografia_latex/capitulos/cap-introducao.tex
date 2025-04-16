@@ -6,23 +6,15 @@
 %% Título e rótulo de capítulo (rótulos não devem conter caracteres especiais, acentuados ou cedilha)
 \chapter{Introdução}\label{cap:introducao}
 
-Um texto curto apresentando o capítulo.
-
-\caixa{Atenção}{Para utilizar esse template é obrigatória a leitura do conteúdo do arquivo \texttt{readme.md}, que está neste projeto!}
+%%INTRODUÇÃO DO TCC
 
 \section{Considerações iniciais}\label{sec:consideracoesIniciais}
 
-As considerações iniciais compõem um texto curto e geral apresentando uma visão geral e sucinta do assunto principal relacionado ao trabalho e a inserção do objeto de pesquisa nesse assunto \cite{Moore:2000:CMC:333067.333074}.
-
-Em relação ao assunto, o apresentado nesta seção pode estar relacionado a trabalhos de outros autores ou ao assunto que fornece a fundamentação (motivação) para o trabalho a ser desenvolvido. Se o assunto está relacionado a trabalhos de outros autores, a contribuição do trabalho é definida em relação ao que já foi pesquisado nesse assunto. Se o assunto será utilizado para embasamento do que será proposto, explicitar como o trabalho se insere nesse assunto. A contribuição pode, ainda, estar relacionada a uma necessidade de mercado ou a uma oportunidade decorrente de algum problema real para o qual se pretender propor uma solução. Nesse caso, o assunto fornece um contexto teórico de suporte para o problema e/ou a solução.
-
-O importante nesta seção é deixar claro do que se trata o trabalho (assunto ou tema), identificar o objeto de pesquisa, como será encaminhada a solução (procedimento metodológico, tecnologias, ferramentas utilizadas) e o que se pretende ao final do trabalho, sem explicitar a solução e os resultados.
-
-\caixa{Atenção}{As seções a seguir são sugestões, converse com o seu orientador para ver quais seções devem ter em seu trabalho!}
+%%TEXTINHO DE CONSIDERAÇÕES
 
 \section{Objetivos}\label{sec:objetivos}
 
-Um texto curto\footnote{Teste de nota de rodapé 1.} apresentando a seção.
+%TEXTINHO DE APRESENTAÇÃO
 
 \subsection{Objetivo geral}\label{subsec:objetivoGeral}
 
@@ -38,17 +30,16 @@ Implementar um algoritmo de aproximação para o cálculo do coeficiente de clus
 
 \section{Justificativa}\label{sec:justificativa}
 
-O coeficiente de clustering local foi inicialmente proposto com a intenção de determinar se um grafo qualquer possuía a propriedade de ser um grafo de mundo pequeno \cite{WattsSmallWorld1998}. Esses grafos possuem algumas características que os tornam muito importantes quando estudamos conceitos de redes sociais e fenômenos de contágio de doenças. Eles possuem alta coesão local [18], ou seja, os nós tendem a formar grupos ou clusters densamente conectados, e possuem baixa distância média [19], logo, a distância média entre dois nós quaisquer no grafo é relativamente pequena, mesmo que o número total de nós no grafo seja muito grande. Isso significa que a maioria dos nós pode ser alcançado a partir de qualquer outro nó através de um pequeno número de etapas.
+O coeficiente de \textit{clustering} local foi inicialmente proposto com a intenção de determinar se um grafo qualquer possuía a propriedade de ser um grafo de mundo pequeno \cite[440--442]{WattsSmallWorl440-442}. Esses grafos possuem algumas características que os tornam muito importantes quando estudamos conceitos de redes sociais e fenômenos de contágio de doenças, por exemplo. Eles possuem alta coesão local \cite[440--441]{WattsSmallWorl440-442}, ou seja, os nós tendem a formar grupos ou clusters densamente conectados, e possuem baixa distância média \cite{Barabasi69-70}, logo, a distância média entre dois nós quaisquer no grafo é relativamente pequena, mesmo que o número total de nós no grafo seja muito grande. Isso significa que a maioria dos nós pode ser alcançado a partir de qualquer outro nó através de um pequeno número de etapas.
 
-Essas características são de extrema importância quando estudamos redes sociais ou redes de transporte, por exemplo. Isso porque existe uma eficiência de comunicação, pois a baixa distância média facilita a rápida disseminação de informações. Assim como também existe robustez e resiliência nessas estruturas, significando que falhas em parte da rede não necessariamente desconectam toda a rede, pois há caminhos alternativos dentro dos clusters.
-Grafos de mundo pequeno são úteis para modelar fenômenos naturais e sociais como a propagação de doenças, a disseminação de ideias e tendências entre vários outros fenômenos [20]. Logo, existir um algoritmo que calcule essa métrica de forma muito aproximada dos exatos, porém em tempo muito menor faz-se muito importante.
+Essas características são de extrema importância quando estudamos redes sociais ou redes de transporte, por exemplo. Isso porque existe uma eficiência de comunicação, pois a baixa distância média facilita a rápida disseminação de informações. Assim como também existe robustez e resiliência nessas estruturas, significando que falhas em parte da rede não necessariamente desconectam toda a rede, pois há caminhos alternativos dentro dos \textit{clusters}.
+Grafos de mundo pequeno são úteis para modelar fenômenos naturais e sociais como a propagação de doenças, a disseminação de ideias e tendências, entre vários outros fenômenos \cite[441--442]{WattsSmallWorl440-442}. Logo, existir um algoritmo que calcule essa métrica de forma muito aproximada dos exatos, porém em tempo muito menor, faz-se muito importante.
 
-Mais do que a própria importância do coeficiente de clustering local, uma das motivações para a implementação do algoritmo proposto por Lima et al. (2022) – além do próprio fato de ser um algoritmo novo sem nenhuma implementação realizada antes – é o diferencial pela utilização da teoria de complexidade de amostras em um algoritmo de amostragem. Uma das vantagens de se utilizar a métrica da VC-Dimension de teoria de complexidade de amostra é que é possível obter um limite superior para o tamanho da amostra que é mais restrito do que os fornecidos pelas técnicas padrão de amostragem de Hoeffding e limitante da união [21]. Além disso, esses limitantes clássicos da literatura para algoritmos de amostragem, como limitante da união, Chernoff e Chebyshev, limitam-se ao tamanho da entrada e não levam em conta a estrutura combinatória de cada entrada, como a VC-Dimension faz no contexto de complexidade de amostras [22].
+Mais do que a própria importância do coeficiente de \textit{clustering} local, uma das motivações para a implementação do algoritmo proposto por Lima et al. \cite{Lima2022} – além do próprio fato de ser um algoritmo novo sem nenhuma implementação realizada antes – é o diferencial pela utilização da teoria de complexidade de amostras em um algoritmo de amostragem. Uma das vantagens de se utilizar a métrica da \textit{VC-Dimension} de teoria de complexidade de amostra é que é possível obter um limite superior para o tamanho da amostra que é mais restrito do que os fornecidos pelas técnicas padrão de amostragem de Hoeffding e limitante da união \cite[63--72]{Lima2022}. Além disso, esses limitantes clássicos da literatura para algoritmos de amostragem, como limitante da união, Chernoff e Chebyshev, limitam-se ao tamanho da entrada e não levam em conta a estrutura combinatória de cada entrada, como a \textit{VC-Dimension} faz no contexto de complexidade de amostras  \cite[14--26]{Lima2022}.
 
-Outro grande fator motivador deste trabalho é a falta de material científico em português dentro da área de teoria de grafos e teoria de complexidade de amostra, tornando o desenvolvimento do conhecimento
+Outro grande fator motivador deste trabalho é a falta de material científico em português dentro da área de teoria de grafos e teoria de complexidade de amostra, tornando o desenvolvimento do conhecimento dessa área muito limitado dentro do Brasil por conta de
+sua inacessibilidade.
 
 \section{Estrutura do trabalho}\label{sec:estruturaTrabalho}
 
-A estrutura do trabalho contém uma relação dos capítulos e uma descrição sucinta do que cada um deles contém. Esta seção fornece uma visão geral do trabalho no sentido da sua estrutura em capítulos\footnote{Teste de nota de rodapé 2.}.
-
-\caixa{Atenção}{O OverLeaf está demorando muito para compilar o modelo com o Capítulo de Exemplos, que explica como usar o LaTeX. Assim, esse capítulo foi removido (está comentado para não compilar), mas há um arquivo chamado \texttt{exemploPDF.pdf}, na raiz do projeto, que contém esse capítulo de exemplos!}
+%ESCREVER RESUMO DE CADA CAP AQUI E ESTRUTURA DO TRABALHO
