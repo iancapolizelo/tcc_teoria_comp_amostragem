@@ -104,3 +104,73 @@ complexidade de amostra para se obter melhores resultados. O algoritmo proposto 
 constantes fixas $0 < \epsilon,\delta,p < 1$, fornece uma estimativa $l'(v)$ para o valor exato $l(v)$ do coeficiente de \textit{clustering} local de cada vértice $v \in V$. Os resultados respeitam $|l(v)-l'(v)| \leq \epsilon l(v)$, com probabilidade de pelo menos $1 - \delta$ sempre que $l(v)$ for pelo menos $\frac{pm}{2^{\delta_v}}$, onde $\delta_v$ é o grau de $v$ \cite[64--65]{Lima2022}. A utilização da \textit{VC-Dimension} e \textit{$\epsilon$-sample} ao invés de abordagens clássicas da literatura, como o limitante da união, para algoritmos de amostragem é em decorrência da importância que a estrutura combinatória das entradas se faz presente neles.
 
 Existe também um algoritmo proposto por Zhang et al. em 2015 que busca computar os top-$k$ vértices com maiores coeficientes de \textit{clustering} local de um grafo e utiliza \textit{VC-Dimension} e o teorema \textit{$\epsilon$-sample} \cite[1445--1454]{Zhang2015}, porém em um contexto e espaço de intervalos diferentes do proposto por Lima et al. (2022).
+
+\section{Complexidade de Amostra}\label{sec:complex_amostra}
+
+A fundamentação teórica dessa seção terá como referência o livro “Understanding
+Machine Learning: From Theory to Algorithms” \cite{Shalev2014}.
+
+\subsection{\textit{VC-Dimension}}\label{subsec:vc_dimension}
+
+A teoria da complexidade de amostras é uma área fundamental em aprendizagem de máquina e teoria da computação. Um dos conceitos centrais nessa área é a dimensão de \textit{Vapnik-Chervonenkis}, também conhecida como \textit{VC-Dimension}. Ela é uma medida combinatória utilizada para expressar a complexidade de um conjunto de funções e está intimamente relacionada à capacidade de um modelo de aprendizagem generalizar bem a partir de amostras.
+
+Para melhor definir a \textit{VC-Dimension}, é necessário antes entender também a definição de \textit{Range Space}.
+
+\begin{itemize}
+    \item \textbf{Range Space:} é um par $R = (X, \mathcal{I})$, onde $X$ é o domínio e o $\mathcal{I}$ um subconjunto de $X$, chamados ranges. Em termos de aprendizagem de máquina, $X$ pode ser visto como um conjunto de pontos dados e $\mathcal{I}$ como uma coleção de subconjuntos de $X$ que podem ser “alcançados” por um modelo de aprendizagem, isto é, as diferentes classificações possíveis dos pontos dados.
+
+    \item \textbf{VC Dimension:} a dimensão \textit{VC} de um \textit{range space} $R = (X, \mathcal{I})$, denotado por $VCDim(R)$, é o tamanho máximo de um conjunto de pontos que pode ser completamente “particionado” por $R$. Aqui, “particionado” significa que, para qualquer partição possível dos pontos em duas classes, como positivo e negativo, existe uma função em $R$ que pode realizar exatamente essa partição. Em termos matemáticos, temos que:\begin{equation}
+        VCDim(R) = max \{d: \exists S \subseteq X \text{ tal que } |S| = d \text{ e } |\mathcal{I_S}| = 2^d
+    \end{equation} A definição acima não implica que todo conjunto de cardinalidade $d$ é particionado por $\mathcal{I}$, porém se for mostrado que todos os conjuntos de cardinalidade de pelo menos $d + 1$ não é particionado por $\mathcal{I}$, então a $VCDim(R)$ não é maior que $d$.
+\end{itemize}
+
+Para exemplificar melhor o cálculo da dimensão \textit{VC} é possível observar o conjunto de funções lineares em $R^2$:
+
+Seja $R = (X, \mathcal{I})$ um \textit{range space} onde $X = R^2$ e $\mathcal{I}$ é o subconjunto de funções lineares no $R^2$. Então temos que $VCDim(R) = 3$. Abaixo está a prova:
+
+Primeiro é necessário mostrar que $VCDim(R) \geq 3$ através das imagens abaixo, onde existe um conjunto de três pontos não colineares que são participados por $\mathcal{I}$:
+
+%% COLOCAR IMAGEM AQUI, FAZENDO IMAGEM AUTORAL
+
+Na imagem acima é possível verificar que os três pontos podem ser totalmente particionados utilizando um conjunto de funções lineares em todas as possibilidades de particionamento.
+
+Agora, também é necessário mostrar que $VCDim(R) < 4$. Para isso, é preciso
+considerar três casos:
+\begin{itemize}
+    \item Um conjunto de três pontos colineares não pode ser totalmente particionado em duas categorias diferentes, visto que não existe uma maneira de separar o ponto médio entre os outros dois pontos por nenhuma função linear.
+
+    \item Um ponto que está dentro do \textbf{fecho convexo} definido por outros três pontos. Este conjunto não pode ser totalmente particionado por uma função linear, visto que não existe meio de separar o ponto interno dos demais pontos.
+\end{itemize}
+
+%% COLOCAR IMAGEM AQUI, FAZENDO IMAGEM AUTORAL
+
+\begin{itemize}
+    \item Um conjunto de quatro pontos que define um fecho convexo não pode ser totalmente particionado, visto que não existe maneira de separar os pontos em vermelho dos pontos em azul por uma função linear, conforme demonstrado na figura abaixo:
+\end{itemize}
+
+%% COLOCAR IMAGEM AQUI, FAZENDO IMAGEM AUTORAL
+
+Sendo assim, temos então que $VCDim(R) = 3$.
+
+Compreender a \textit{VC-Dimension} é crucial para analisar a capacidade de generalização de modelos de aprendizagem de máquina. Ela fornece uma medida de quão complexos são os padrões que um modelo pode capturar e isso está diretamente relacionado à probabilidade do modelo de realizar uma boa generalização em novos dados.
+
+\subsection{$(p, \epsilon)$-aproximação}\label{subsec:epi_aprox}
+
+A fim de aplicar essa métrica na amostra e conseguir verificar o tamanho necessário dela, e relacioná-la com a aproximação, existem a definição e teorema a seguir.
+
+A $(p, \epsilon)$-aproximação relativa é útil no contexto em que se deseja encontrar uma amostra $S \subseteq X$ que estime o tamanho dos intervalos em $\mathcal{I}$, em relação a um parâmetro ajustável $p$, dentro
+de $\epsilon Pr_\pi(I)$, para $0 < \epsilon ,p, \delta < 1$. Isso ocorre com probabilidade pelo menos $1-\delta$, para $0 < \delta < 1$, onde $\pi$ é uma distribuição sobre $X$ e $Pr_\pi (I)$ é a probabilidade de uma amostra de $\pi$ pertencer a $I$. A definição formal de $(p,\epsilon)$-aproximação relativa é dada por:
+
+\begin{itemize}
+    \item \textbf{Definição 1} ($(p,\epsilon)$-aproximação relativa, (Riondato e Kornaropoulos (2016)), Definição 5). Dado $0 < \epsilon , p , \delta < 1$, um conjunto $S$ é chamado de $(p, \epsilon)$-aproximação em relação a um espaço de intervalos $R = (X, \mathcal{I})$, e uma distribuição $\pi$ sobre $X$ se para todo $I \in \mathcal{I}$, \begin{equation}
+        |Pr_\pi(I)- \frac{|S \cap I|}{|S|}| \leq \epsilon Pr_\pi(I), \text{ se } Pr_\pi(I) \geq p ,
+    \end{equation}\begin{equation}
+        \frac{|S \cap I|}{|S|} \leq (1 + \epsilon)p, \text{ senão }
+    \end{equation}
+\end{itemize}
+
+Um limite superior para a \textit{VC-Dimension} de um espaço de intervalos permite construir uma amostra $S$ que é um conjunto de $(p, \epsilon)$-aproximação.
+
+\begin{itemize}
+    \item \textbf{Teorema 1} (Har-Peled e Sharir (2011), Teorema 5). Dado $0 < \epsilon , p, \delta < 1$, seja $R = (X, \mathcal{I})$ um \textit{range space} com $VCDim(R) \leq d$, uma distribuição dada $\pi$ sobre $X$, e seja $c$ uma constante positiva universal. Uma coleção $S \subseteq X$ amostrada em relação a $\pi$ com $|S| \geq \frac{c}{\epsilon^2 p}(dlog\frac{1}{p}+log\frac{1}{\delta})$ é uma $(p, \epsilon)$-aproximação relativa com probabilidade de pelo menos $1 - \delta$, onde $c$ é uma constante positiva absoluta.
+\end{itemize}
