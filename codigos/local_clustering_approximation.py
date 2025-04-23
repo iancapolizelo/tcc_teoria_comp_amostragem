@@ -26,8 +26,13 @@ def local_clustering_approximation(G: nx.classes.graph.Graph, epsilon: float, de
 
     for v in G.nodes():
       t_aprox[v] = 0
+      local_clustering[v] = 0
 
     r = ceil((universalConstant / (epsilon * epsilon * p)) * (((floor(log(max_degree, 2.0) - 1.0) + 1.0) * log(1/p))+ log(1/delta)))
+
+    if r > m:
+      r = m
+      print("r > m, then r <- m " + str(r),file=f)
 
     print("Number of samples r = " + str(r),file=f)
 
@@ -41,7 +46,5 @@ def local_clustering_approximation(G: nx.classes.graph.Graph, epsilon: float, de
 
         if G.degree(v) > 1:
           local_clustering[v] = round(((2 * t_aprox[v]) / (G.degree(v) * (G.degree(v) - 1))),2)
-        else:
-          local_clustering[v] = 0
 
     return local_clustering

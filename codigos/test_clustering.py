@@ -125,10 +125,9 @@ def main(in_file: str, out_file: str,  directed: int):
                 diffs = {}
                 sum_diffs = 0.0
                 for v in G.nodes:
-                    if v in pc_tilde_ord:
-                        diffs[v] = abs(pc_ord[v] - pc_tilde_ord[v])
-                        sum_diffs += diffs[v]
-                        diffs_list.append(diffs[v])
+                    diffs[v] = abs(pc_ord[v] - pc_tilde_ord[v])
+                    sum_diffs += diffs[v]
+                    diffs_list.append(diffs[v])
                 avg_error = sum_diffs/len(G.nodes)
                 errors.append(avg_error)
                 deviation = stdev(diffs_list)
