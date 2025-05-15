@@ -8,7 +8,7 @@ from math import log, floor, ceil
 import itertools
 import sys
 from statistics import stdev 
-from local_clustering_approximation import local_clustering_approximation
+from local_clustering_approximation import local_clustering_approximation, local_clustering_exato
 
 ###########################################################################################
 def read_graph(file_path, directed=False):
@@ -40,6 +40,19 @@ def read_graph(file_path, directed=False):
 
     return G
 ###########################################################################################
+def gerar_grafo_aleatorio(num_vertices, num_arestas):
+    """Gera um grafo aleatório com o número especificado de vértices e arestas.
+
+    Args:
+        num_vertices: O número de vértices no grafo.
+        num_arestas: O número de arestas no grafo.
+
+    Returns:
+        Um grafo aleatório.
+    """
+    G = nx.gnm_random_graph(num_vertices, num_arestas)
+    return G
+###########################################################################################
 
 def calcular_media_dicionario(dicionario):
   """Calcula a média dos valores de um dicionário.
@@ -55,7 +68,7 @@ def calcular_media_dicionario(dicionario):
   return media
 
 ###########################################################################################
-def main(in_file: str, out_file: str,  directed: int):
+def main(in_file: str, out_file: str,  directed: int, aleatorio: int = 0):
 
     """
     Main function
@@ -77,24 +90,35 @@ def main(in_file: str, out_file: str,  directed: int):
     n = 1000
     #G = nx.barabasi_albert_graph(n, 3)
     '''
-
+    #G = gerar_grafo_aleatorio(90, 300)
     G = read_graph(in_file, directed)
-    n = len(G)
 
     with open(out_file, 'w') as f:
         print("###########################################################################################", file=f)
-        print("New round of tests: \n", file=f)
-        print("The graph has {} vertices and {} edges".format(G.number_of_nodes(), G.number_of_edges()), file=f)
+        print("Nova rodada de testes: \n", file=f)
+        print("O grafo tem {} vertices e {} arestas".format(G.number_of_nodes(), G.number_of_edges()), file=f)
 
 
         
         t1 = time.process_time()
-        pc = nx.clustering(G)
-        print("Total running time (exact algorithm): " + str(time.process_time() - t1), file=f)
+        clustering_exato_networkx = nx.clustering(G)
+        print("Total de tempo de execucao do algoritmo exato (lib networkx): " + str(time.process_time() - t1), file=f)
         #print("Exact coefficient clustering values: \n" + ', '.join('{:0.20f}'.format(pc_ord[i]) for i in pc_ord) + "\n", file=f)
-        media_pc = calcular_media_dicionario(pc)
-        print("Average from exact coefficient clustering = " + str(media_pc) + "\n", file=f)
-        pc_ord = dict(sorted(pc.items()))
+        media_exato_networkx = calcular_media_dicionario(clustering_exato_networkx)
+        print("Media dos coeficientes de clustering local do algoritmo exato (lib networkx) = " + str(media_exato_networkx) + "\n", file=f)
+        exato_networkx_ord = dict(sorted(clustering_exato_networkx.items()))
+        #print("Valores de coeficientes de clustering exato (lib networkx): ", file=f)
+        #print(exato_networkx_ord, file=f)
+
+        t1 = time.process_time()
+        clustering_exato_nosso = local_clustering_exato(G, f)
+        print("Total de tempo de execucao do algoritmo exato (autoral): " + str(time.process_time() - t1), file=f)
+        #print("Exact coefficient clustering values: \n" + ', '.join('{:0.20f}'.format(pc_ord[i]) for i in pc_ord) + "\n", file=f)
+        media_exato_nosso = calcular_media_dicionario(clustering_exato_nosso)
+        print("Media dos coeficientes de clustering local do algoritmo exato (autoral) = " + str(media_exato_nosso) + "\n", file=f)
+        exato_nosso_ord = dict(sorted(clustering_exato_nosso.items()))
+        #print("Valores de coeficientes de clustering exato (autoral): ", file=f)
+        #print(exato_nosso_ord, file=f)
         
 
 
@@ -105,48 +129,61 @@ def main(in_file: str, out_file: str,  directed: int):
         i = 0
         for e in epsilon:
             times = []
-            errors = []
-            diffs_list = []
-            deviations = []
+            errors_networkx = []
+            errors_nosso = []
+            diffs_list_networkx = []
+            diffs_list_nosso = []
+            deviations_networkx = []
+            deviations_nosso = []
             while i < 10:
                 print("", file=f)
-                print("Iteration: " + str(i), file=f)
+                print("Iteracao: " + str(i), file=f)
                 print("epsilon: "+str(e)+" ------------------------------------", file=f)
                 t2 = time.process_time()
                 pc_tilde = local_clustering_approximation(G, float(e), float(delta), float(p), f)
-                print("Total running time (approximation algorithm): " + str(time.process_time() - t2), file=f)
+                print("Total de tempo de execucao do algoritmo de aproximacao: " + str(time.process_time() - t2), file=f)
                 times.append(time.process_time() - t2)
                 #print("Approximated coefficient clustering values: \n" + ', '.join('{:0.20f}'.format(pc_tilde_ord[i]) for i in pc_tilde_ord), file=f)
-                print("Zeros = " + str(list(pc_tilde.values()).count(0)), file=f)
+                print("Quantidade de Zeros = " + str(list(pc_tilde.values()).count(0)), file=f)
                 avg_tilde = calcular_media_dicionario(pc_tilde)
-                print("Average = " + str(avg_tilde) + "\n", file=f)
+                print("Media dos coeficientes de clustering local do algoritmo aproximado = " + str(avg_tilde) + "\n", file=f)
                 pc_tilde_ord = dict(sorted(pc_tilde.items()))
 
-                diffs = {}
-                sum_diffs = 0.0
-                for v in G.nodes:
-                    diffs[v] = abs(pc_ord[v] - pc_tilde_ord[v])
-                    sum_diffs += diffs[v]
-                    diffs_list.append(diffs[v])
-                avg_error = sum_diffs/len(G.nodes)
-                errors.append(avg_error)
-                deviation = stdev(diffs_list)
-                deviations.append(deviation)
-        
-                #print("Absolute difference between the exact and the approximation algorithm:\n" + ', '.join('{:0.20f}'.format(diffs[i]) for i in diffs), file=f)
-                sorted_diffs = sorted(diffs.items(), key=lambda kv: kv[1], reverse=True)
-                diffs_d = collections.OrderedDict(sorted_diffs)
-                #print("Absolute difference between the exact and the approximation algorithm (sorted, non-increasing):\n" + ', '.join('{:0.20f}'.format(diffs_d[i]) for i in diffs_d), file=f)
+                diffs_networkx = {}
+                sum_diffs_networkx = 0.0
 
+                diffs_nosso = {}
+                sum_diffs_nosso = 0.0
+
+                for v in G.nodes:
+                    diffs_networkx[v] = abs(exato_networkx_ord[v] - pc_tilde_ord[v])
+                    diffs_nosso[v] = abs(exato_nosso_ord[v] - pc_tilde_ord[v])
+                    sum_diffs_networkx += diffs_networkx[v]
+                    sum_diffs_nosso += diffs_nosso[v]
+                    diffs_list_networkx.append(diffs_networkx[v])
+                    diffs_list_nosso.append(diffs_nosso[v])
+                avg_error_networkx = sum_diffs_networkx/len(G.nodes)
+                avg_error_nosso = sum_diffs_nosso/len(G.nodes)
+                errors_networkx.append(avg_error_networkx)
+                errors_nosso.append(avg_error_nosso)
+                deviation_networkx = stdev(diffs_list_networkx)
+                deviation_nosso = stdev(diffs_list_nosso)
+                deviations_networkx.append(deviation_networkx)
+                deviations_nosso.append(deviation_nosso)
+        
                 i += 1
             print("", file=f)
             print("", file=f)
-            print("time: ", file=f)
+            print("Tempos de execucao: ", file=f)
             print(times, file=f)
-            print("avg error: ", file=f)
-            print(errors, file=f)
-            print("std dev: ", file=f)
-            print(deviations, file=f)
+            print("Media de erros comparado com exato networkx: ", file=f)
+            print(errors_networkx, file=f)
+            print("Media de erros comparado com exato nosso: ", file=f)
+            print(errors_nosso, file=f)
+            print("Desvio padrao comparado com exato networkx: ", file=f)
+            print(deviations_networkx, file=f)
+            print("Desvio padrao comparado com exato nosso: ", file=f)
+            print(deviations_nosso, file=f)
         
             i = 0
     f.close
