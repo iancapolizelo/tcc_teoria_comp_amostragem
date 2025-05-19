@@ -1,0 +1,399 @@
+###########################################################################################
+New round of tests: 
+
+The graph has 924 vertices and 3239 edges
+Total running time (exact algorithm): 0.03125
+Average from exact coefficient clustering = 0.3025800688660065
+
+
+Iteration: 0
+epsilon: 0.04 ------------------------------------
+r > m, then r <- m 3239
+Number of samples r = 3239
+Total running time (approximation algorithm): 1.640625
+Zeros = 529
+Average = 0.20459956709956711
+
+
+Iteration: 1
+epsilon: 0.04 ------------------------------------
+r > m, then r <- m 3239
+Number of samples r = 3239
+Total running time (approximation algorithm): 1.609375
+Zeros = 541
+Average = 0.16472943722943723
+
+
+Iteration: 2
+epsilon: 0.04 ------------------------------------
+r > m, then r <- m 3239
+Number of samples r = 3239
+Total running time (approximation algorithm): 1.65625
+Zeros = 525
+Average = 0.2697186147186147
+
+
+Iteration: 3
+epsilon: 0.04 ------------------------------------
+r > m, then r <- m 3239
+Number of samples r = 3239
+Total running time (approximation algorithm): 1.703125
+Zeros = 531
+Average = 0.18002164502164503
+
+
+Iteration: 4
+epsilon: 0.04 ------------------------------------
+r > m, then r <- m 3239
+Number of samples r = 3239
+Total running time (approximation algorithm): 1.65625
+Zeros = 533
+Average = 0.19533549783549783
+
+
+Iteration: 5
+epsilon: 0.04 ------------------------------------
+r > m, then r <- m 3239
+Number of samples r = 3239
+Total running time (approximation algorithm): 1.65625
+Zeros = 538
+Average = 0.19774891774891776
+
+
+Iteration: 6
+epsilon: 0.04 ------------------------------------
+r > m, then r <- m 3239
+Number of samples r = 3239
+Total running time (approximation algorithm): 1.71875
+Zeros = 552
+Average = 0.1685064935064935
+
+
+Iteration: 7
+epsilon: 0.04 ------------------------------------
+r > m, then r <- m 3239
+Number of samples r = 3239
+Total running time (approximation algorithm): 1.59375
+Zeros = 534
+Average = 0.178961038961039
+
+
+Iteration: 8
+epsilon: 0.04 ------------------------------------
+r > m, then r <- m 3239
+Number of samples r = 3239
+Total running time (approximation algorithm): 1.828125
+Zeros = 536
+Average = 0.19221861471861473
+
+
+Iteration: 9
+epsilon: 0.04 ------------------------------------
+r > m, then r <- m 3239
+Number of samples r = 3239
+Total running time (approximation algorithm): 1.65625
+Zeros = 545
+Average = 0.20286796536796536
+
+
+
+time: 
+[1.640625, 1.609375, 1.65625, 1.703125, 1.65625, 1.65625, 1.71875, 1.59375, 1.828125, 1.65625]
+avg error: 
+[0.3078403742625839, 0.28283291761742707, 0.3676625248152541, 0.29361195554304775, 0.3080998064155433, 0.3119715539127417, 0.2905131071176144, 0.2921653343361136, 0.30010936093474105, 0.31745493224230625]
+std dev: 
+[0.35198411637929405, 0.30991279953851886, 0.4084285824011964, 0.3836592436539802, 0.3706054766585598, 0.36502869231850277, 0.35390403582250896, 0.34527202319373834, 0.34282846982039406, 0.3439320272191163]
+
+Iteration: 0
+epsilon: 0.06 ------------------------------------
+r > m, then r <- m 3239
+Number of samples r = 3239
+Total running time (approximation algorithm): 1.6875
+Zeros = 535
+Average = 0.21487012987012985
+
+
+Iteration: 1
+epsilon: 0.06 ------------------------------------
+r > m, then r <- m 3239
+Number of samples r = 3239
+Total running time (approximation algorithm): 1.640625
+Zeros = 534
+Average = 0.20809523809523808
+
+
+Iteration: 2
+epsilon: 0.06 ------------------------------------
+r > m, then r <- m 3239
+Number of samples r = 3239
+Total running time (approximation algorithm): 1.609375
+Zeros = 560
+Average = 0.14895021645021644
+
+
+Iteration: 3
+epsilon: 0.06 ------------------------------------
+r > m, then r <- m 3239
+Number of samples r = 3239
+Total running time (approximation algorithm): 1.8125
+Zeros = 524
+Average = 0.19515151515151513
+
+
+Iteration: 4
+epsilon: 0.06 ------------------------------------
+r > m, then r <- m 3239
+Number of samples r = 3239
+Total running time (approximation algorithm): 1.703125
+Zeros = 544
+Average = 0.16764069264069265
+
+
+Iteration: 5
+epsilon: 0.06 ------------------------------------
+r > m, then r <- m 3239
+Number of samples r = 3239
+Total running time (approximation algorithm): 1.65625
+Zeros = 528
+Average = 0.19194805194805195
+
+
+Iteration: 6
+epsilon: 0.06 ------------------------------------
+r > m, then r <- m 3239
+Number of samples r = 3239
+Total running time (approximation algorithm): 1.609375
+Zeros = 537
+Average = 0.1943939393939394
+
+
+Iteration: 7
+epsilon: 0.06 ------------------------------------
+r > m, then r <- m 3239
+Number of samples r = 3239
+Total running time (approximation algorithm): 1.609375
+Zeros = 523
+Average = 0.19931818181818184
+
+
+Iteration: 8
+epsilon: 0.06 ------------------------------------
+r > m, then r <- m 3239
+Number of samples r = 3239
+Total running time (approximation algorithm): 1.625
+Zeros = 527
+Average = 0.21558441558441557
+
+
+Iteration: 9
+epsilon: 0.06 ------------------------------------
+r > m, then r <- m 3239
+Number of samples r = 3239
+Total running time (approximation algorithm): 1.65625
+Zeros = 536
+Average = 0.1936038961038961
+
+
+
+time: 
+[1.6875, 1.640625, 1.609375, 1.8125, 1.703125, 1.65625, 1.609375, 1.609375, 1.625, 1.65625]
+avg error: 
+[0.3264419102008276, 0.3119480916503831, 0.29458837362349166, 0.29349285086225474, 0.2889861055209029, 0.29258275993361155, 0.2983198622716748, 0.294483799768691, 0.3134429006089989, 0.3018542358642991]
+std dev: 
+[0.3997687359918111, 0.3724573577513527, 0.34215982702862, 0.33021550451750176, 0.3201382209193616, 0.3168027489395489, 0.3155639351708012, 0.3168409981297358, 0.3231193948305907, 0.32235476853900824]
+
+Iteration: 0
+epsilon: 0.08 ------------------------------------
+r > m, then r <- m 3239
+Number of samples r = 3239
+Total running time (approximation algorithm): 1.59375
+Zeros = 543
+Average = 0.15964285714285714
+
+
+Iteration: 1
+epsilon: 0.08 ------------------------------------
+r > m, then r <- m 3239
+Number of samples r = 3239
+Total running time (approximation algorithm): 1.640625
+Zeros = 523
+Average = 0.20291125541125543
+
+
+Iteration: 2
+epsilon: 0.08 ------------------------------------
+r > m, then r <- m 3239
+Number of samples r = 3239
+Total running time (approximation algorithm): 1.6875
+Zeros = 535
+Average = 0.17970779220779223
+
+
+Iteration: 3
+epsilon: 0.08 ------------------------------------
+r > m, then r <- m 3239
+Number of samples r = 3239
+Total running time (approximation algorithm): 1.65625
+Zeros = 513
+Average = 0.1988095238095238
+
+
+Iteration: 4
+epsilon: 0.08 ------------------------------------
+r > m, then r <- m 3239
+Number of samples r = 3239
+Total running time (approximation algorithm): 1.625
+Zeros = 521
+Average = 0.26296536796536796
+
+
+Iteration: 5
+epsilon: 0.08 ------------------------------------
+r > m, then r <- m 3239
+Number of samples r = 3239
+Total running time (approximation algorithm): 1.640625
+Zeros = 511
+Average = 0.25991341991341993
+
+
+Iteration: 6
+epsilon: 0.08 ------------------------------------
+r > m, then r <- m 3239
+Number of samples r = 3239
+Total running time (approximation algorithm): 1.671875
+Zeros = 525
+Average = 0.21235930735930736
+
+
+Iteration: 7
+epsilon: 0.08 ------------------------------------
+r > m, then r <- m 3239
+Number of samples r = 3239
+Total running time (approximation algorithm): 1.640625
+Zeros = 546
+Average = 0.1890800865800866
+
+
+Iteration: 8
+epsilon: 0.08 ------------------------------------
+r > m, then r <- m 3239
+Number of samples r = 3239
+Total running time (approximation algorithm): 1.59375
+Zeros = 528
+Average = 0.20735930735930735
+
+
+Iteration: 9
+epsilon: 0.08 ------------------------------------
+r > m, then r <- m 3239
+Number of samples r = 3239
+Total running time (approximation algorithm): 1.65625
+Zeros = 555
+Average = 0.1571861471861472
+
+
+
+time: 
+[1.59375, 1.640625, 1.6875, 1.65625, 1.625, 1.640625, 1.671875, 1.640625, 1.59375, 1.65625]
+avg error: 
+[0.2917240159001425, 0.30063499040508185, 0.2949924450577032, 0.29511687626693167, 0.362351859102432, 0.34079696351691957, 0.30899225989498913, 0.3045907916719015, 0.3137025547991344, 0.2881148948570056]
+std dev: 
+[0.27673063068176174, 0.3066588435014632, 0.30546477673014333, 0.306246810718414, 0.3769617839352917, 0.3869440318669935, 0.3819554316070647, 0.37745712691341965, 0.3744310037770208, 0.3653851206202617]
+
+Iteration: 0
+epsilon: 0.1 ------------------------------------
+r > m, then r <- m 3239
+Number of samples r = 3239
+Total running time (approximation algorithm): 1.65625
+Zeros = 539
+Average = 0.17045454545454544
+
+
+Iteration: 1
+epsilon: 0.1 ------------------------------------
+r > m, then r <- m 3239
+Number of samples r = 3239
+Total running time (approximation algorithm): 1.625
+Zeros = 520
+Average = 0.21767316017316016
+
+
+Iteration: 2
+epsilon: 0.1 ------------------------------------
+r > m, then r <- m 3239
+Number of samples r = 3239
+Total running time (approximation algorithm): 1.59375
+Zeros = 548
+Average = 0.1828896103896104
+
+
+Iteration: 3
+epsilon: 0.1 ------------------------------------
+r > m, then r <- m 3239
+Number of samples r = 3239
+Total running time (approximation algorithm): 1.625
+Zeros = 526
+Average = 0.18273809523809523
+
+
+Iteration: 4
+epsilon: 0.1 ------------------------------------
+r > m, then r <- m 3239
+Number of samples r = 3239
+Total running time (approximation algorithm): 1.640625
+Zeros = 526
+Average = 0.18335497835497838
+
+
+Iteration: 5
+epsilon: 0.1 ------------------------------------
+r > m, then r <- m 3239
+Number of samples r = 3239
+Total running time (approximation algorithm): 1.59375
+Zeros = 540
+Average = 0.16234848484848483
+
+
+Iteration: 6
+epsilon: 0.1 ------------------------------------
+r > m, then r <- m 3239
+Number of samples r = 3239
+Total running time (approximation algorithm): 1.625
+Zeros = 531
+Average = 0.17517316017316018
+
+
+Iteration: 7
+epsilon: 0.1 ------------------------------------
+r > m, then r <- m 3239
+Number of samples r = 3239
+Total running time (approximation algorithm): 1.625
+Zeros = 530
+Average = 0.2327705627705628
+
+
+Iteration: 8
+epsilon: 0.1 ------------------------------------
+r > m, then r <- m 3239
+Number of samples r = 3239
+Total running time (approximation algorithm): 1.65625
+Zeros = 551
+Average = 0.184025974025974
+
+
+Iteration: 9
+epsilon: 0.1 ------------------------------------
+r > m, then r <- m 3239
+Number of samples r = 3239
+Total running time (approximation algorithm): 1.59375
+Zeros = 538
+Average = 0.22535714285714284
+
+
+
+time: 
+[1.65625, 1.625, 1.59375, 1.625, 1.640625, 1.59375, 1.625, 1.625, 1.65625, 1.59375]
+avg error: 
+[0.28588377598436643, 0.31758147882597815, 0.2962226493225728, 0.29804382531878537, 0.2849819463591809, 0.2854317160630205, 0.28236313037902044, 0.3317763248977089, 0.3103890882840205, 0.33249907881242685]
+std dev: 
+[0.2877149968972526, 0.32664744593750583, 0.31408705436416706, 0.3163609598313285, 0.30943442142426797, 0.3046186684526528, 0.29902087902615504, 0.3148150151868349, 0.3168561035846529, 0.3239535128053575]
