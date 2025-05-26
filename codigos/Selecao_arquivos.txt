@@ -1,0 +1,22 @@
+Seleção de arquivos para execução de experimentos:
+
+Repositório: 
+Scientific Computing
+
+Arquivo:
+sc-nasasrb
+Arestas: 1M
+Kavg = 0.56
+
+Arquivo:
+sc-shipsec5
+Arestas: 2M
+Kavg = 0.36
+
+Repositório:
+Technological Networks
+
+Arquivo:
+tech-RL-caida
+Arestas: 608K
+Kavg: 0.16

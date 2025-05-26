@@ -4,7 +4,7 @@ import random
 import operator
 import collections
 
-def local_clustering_approximation(G: nx.classes.graph.Graph, epsilon: float, delta: float, p: float, f: str):
+def local_clustering_approximation(G: nx.classes.graph.Graph, epsilon: float, delta: float, p: float, f: str, max_degree: int, m: int, universalConstant: float = 0.5, local_clustering: dict = None, t_aprox: dict = None):
     """
     Approximates the local clustering coefficient of a graph.
 
@@ -17,17 +17,7 @@ def local_clustering_approximation(G: nx.classes.graph.Graph, epsilon: float, de
     Returns:
         The approximated local clustering coefficient.
     """
-    #parameters
-    local_clustering = {}
-    t_aprox = {}
-    m = G.number_of_edges()
-    max_degree = max(G.degree, key=operator.itemgetter(1))[1]
-    universalConstant=0.5
-
-    for v in G.nodes():
-      t_aprox[v] = 0
-      local_clustering[v] = 0
-
+    
     r = ceil((universalConstant / (epsilon * epsilon * p)) * (((floor(log(max_degree, 2.0) - 1.0) + 1.0) * log(1/p))+ log(1/delta)))
 
     if r > m:

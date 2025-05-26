@@ -1,0 +1,418 @@
+###########################################################################################
+Nova rodada de testes: 
+
+O grafo tem 43 vertices e 546 arestas
+Total de tempo de execucao do algoritmo exato (lib networkx): 0.0
+Media dos coeficientes de clustering local do algoritmo exato (lib networkx) = 0.9265232045897539
+
+Total de tempo de execucao do algoritmo exato (autoral): 0.046875
+Media dos coeficientes de clustering local do algoritmo exato (autoral) = 0.9055813953488372
+
+
+Iteracao: 0
+epsilon: 0.04 ------------------------------------
+r > m, entao r <- m 546
+Numero de amostras eh r = 546
+Total de tempo de execucao do algoritmo de aproximacao: 0.078125
+Quantidade de Zeros = 2
+Media dos coeficientes de clustering local do algoritmo aproximado = 0.8686046511627907
+
+
+Iteracao: 1
+epsilon: 0.04 ------------------------------------
+r > m, entao r <- m 546
+Numero de amostras eh r = 546
+Total de tempo de execucao do algoritmo de aproximacao: 0.078125
+Quantidade de Zeros = 1
+Media dos coeficientes de clustering local do algoritmo aproximado = 0.9406976744186047
+
+
+Iteracao: 2
+epsilon: 0.04 ------------------------------------
+r > m, entao r <- m 546
+Numero de amostras eh r = 546
+Total de tempo de execucao do algoritmo de aproximacao: 0.09375
+Quantidade de Zeros = 1
+Media dos coeficientes de clustering local do algoritmo aproximado = 0.9218604651162791
+
+
+Iteracao: 3
+epsilon: 0.04 ------------------------------------
+r > m, entao r <- m 546
+Numero de amostras eh r = 546
+Total de tempo de execucao do algoritmo de aproximacao: 0.078125
+Quantidade de Zeros = 3
+Media dos coeficientes de clustering local do algoritmo aproximado = 0.853953488372093
+
+
+Iteracao: 4
+epsilon: 0.04 ------------------------------------
+r > m, entao r <- m 546
+Numero de amostras eh r = 546
+Total de tempo de execucao do algoritmo de aproximacao: 0.09375
+Quantidade de Zeros = 3
+Media dos coeficientes de clustering local do algoritmo aproximado = 0.8625581395348838
+
+
+Iteracao: 5
+epsilon: 0.04 ------------------------------------
+r > m, entao r <- m 546
+Numero de amostras eh r = 546
+Total de tempo de execucao do algoritmo de aproximacao: 0.09375
+Quantidade de Zeros = 1
+Media dos coeficientes de clustering local do algoritmo aproximado = 0.9220930232558139
+
+
+Iteracao: 6
+epsilon: 0.04 ------------------------------------
+r > m, entao r <- m 546
+Numero de amostras eh r = 546
+Total de tempo de execucao do algoritmo de aproximacao: 0.09375
+Quantidade de Zeros = 2
+Media dos coeficientes de clustering local do algoritmo aproximado = 0.8937209302325582
+
+
+Iteracao: 7
+epsilon: 0.04 ------------------------------------
+r > m, entao r <- m 546
+Numero de amostras eh r = 546
+Total de tempo de execucao do algoritmo de aproximacao: 0.09375
+Quantidade de Zeros = 1
+Media dos coeficientes de clustering local do algoritmo aproximado = 0.9193023255813954
+
+
+Iteracao: 8
+epsilon: 0.04 ------------------------------------
+r > m, entao r <- m 546
+Numero de amostras eh r = 546
+Total de tempo de execucao do algoritmo de aproximacao: 0.078125
+Quantidade de Zeros = 2
+Media dos coeficientes de clustering local do algoritmo aproximado = 0.8727906976744186
+
+
+Iteracao: 9
+epsilon: 0.04 ------------------------------------
+r > m, entao r <- m 546
+Numero de amostras eh r = 546
+Total de tempo de execucao do algoritmo de aproximacao: 0.09375
+Quantidade de Zeros = 2
+Media dos coeficientes de clustering local do algoritmo aproximado = 0.9116279069767442
+
+
+
+Tempos de execucao: 
+[0.078125, 0.078125, 0.09375, 0.078125, 0.09375, 0.09375, 0.09375, 0.09375, 0.078125, 0.09375]
+Media de erros comparado com exato networkx: 
+[0.06871361748000025, 0.08026755829522697, 0.046206476179778334, 0.1002961024824579, 0.0729223453686187, 0.06513351313382204, 0.05919277661279339, 0.11229798377783903, 0.04886574298272812, 0.084338608525317]
+Media de erros comparado com exato nosso: 
+[0.0686046511627907, 0.08023255813953488, 0.045581395348837206, 0.09953488372093024, 0.0727906976744186, 0.06488372093023256, 0.05930232558139536, 0.1127906976744186, 0.04906976744186047, 0.08372093023255815]
+Desvio padrao comparado com exato networkx: 
+[0.1932469163688886, 0.19381203173410566, 0.1666552953227938, 0.18214069421344342, 0.1882362152616418, 0.18771747170230474, 0.18659184483755983, 0.19036437774014722, 0.1867106548235078, 0.18957187836768274]
+Desvio padrao comparado com exato nosso: 
+[0.19326248367673232, 0.19385018260722278, 0.16674784844561055, 0.18224247995851017, 0.1883249929712293, 0.18779936938925978, 0.18666900014361767, 0.1904079216370576, 0.18674549988164277, 0.18963446419440685]
+
+Iteracao: 0
+epsilon: 0.06 ------------------------------------
+r > m, entao r <- m 546
+Numero de amostras eh r = 546
+Total de tempo de execucao do algoritmo de aproximacao: 0.09375
+Quantidade de Zeros = 2
+Media dos coeficientes de clustering local do algoritmo aproximado = 0.8802325581395349
+
+
+Iteracao: 1
+epsilon: 0.06 ------------------------------------
+r > m, entao r <- m 546
+Numero de amostras eh r = 546
+Total de tempo de execucao do algoritmo de aproximacao: 0.09375
+Quantidade de Zeros = 2
+Media dos coeficientes de clustering local do algoritmo aproximado = 0.8567441860465117
+
+
+Iteracao: 2
+epsilon: 0.06 ------------------------------------
+r > m, entao r <- m 546
+Numero de amostras eh r = 546
+Total de tempo de execucao do algoritmo de aproximacao: 0.140625
+Quantidade de Zeros = 3
+Media dos coeficientes de clustering local do algoritmo aproximado = 0.8183720930232558
+
+
+Iteracao: 3
+epsilon: 0.06 ------------------------------------
+r > m, entao r <- m 546
+Numero de amostras eh r = 546
+Total de tempo de execucao do algoritmo de aproximacao: 0.09375
+Quantidade de Zeros = 1
+Media dos coeficientes de clustering local do algoritmo aproximado = 0.934186046511628
+
+
+Iteracao: 4
+epsilon: 0.06 ------------------------------------
+r > m, entao r <- m 546
+Numero de amostras eh r = 546
+Total de tempo de execucao do algoritmo de aproximacao: 0.09375
+Quantidade de Zeros = 2
+Media dos coeficientes de clustering local do algoritmo aproximado = 0.9390697674418605
+
+
+Iteracao: 5
+epsilon: 0.06 ------------------------------------
+r > m, entao r <- m 546
+Numero de amostras eh r = 546
+Total de tempo de execucao do algoritmo de aproximacao: 0.109375
+Quantidade de Zeros = 1
+Media dos coeficientes de clustering local do algoritmo aproximado = 0.8576744186046512
+
+
+Iteracao: 6
+epsilon: 0.06 ------------------------------------
+r > m, entao r <- m 546
+Numero de amostras eh r = 546
+Total de tempo de execucao do algoritmo de aproximacao: 0.109375
+Quantidade de Zeros = 1
+Media dos coeficientes de clustering local do algoritmo aproximado = 0.977906976744186
+
+
+Iteracao: 7
+epsilon: 0.06 ------------------------------------
+r > m, entao r <- m 546
+Numero de amostras eh r = 546
+Total de tempo de execucao do algoritmo de aproximacao: 0.09375
+Quantidade de Zeros = 2
+Media dos coeficientes de clustering local do algoritmo aproximado = 0.883953488372093
+
+
+Iteracao: 8
+epsilon: 0.06 ------------------------------------
+r > m, entao r <- m 546
+Numero de amostras eh r = 546
+Total de tempo de execucao do algoritmo de aproximacao: 0.109375
+Quantidade de Zeros = 1
+Media dos coeficientes de clustering local do algoritmo aproximado = 0.8851162790697675
+
+
+Iteracao: 9
+epsilon: 0.06 ------------------------------------
+r > m, entao r <- m 546
+Numero de amostras eh r = 546
+Total de tempo de execucao do algoritmo de aproximacao: 0.09375
+Quantidade de Zeros = 1
+Media dos coeficientes de clustering local do algoritmo aproximado = 0.8876744186046512
+
+
+
+Tempos de execucao: 
+[0.09375, 0.09375, 0.140625, 0.09375, 0.09375, 0.109375, 0.109375, 0.09375, 0.109375, 0.09375]
+Media de erros comparado com exato networkx: 
+[0.058814173558668505, 0.06262931183521625, 0.10680010052169271, 0.08369630318198343, 0.1137690658340674, 0.07066255582230165, 0.1008760373821492, 0.06080757679870694, 0.04877923166811566, 0.04739005320466863]
+Media de erros comparado com exato nosso: 
+[0.05883720930232559, 0.06279069767441861, 0.10627906976744186, 0.08302325581395349, 0.11441860465116278, 0.07069767441860465, 0.10162790697674419, 0.06069767441860466, 0.04837209302325582, 0.046744186046511635]
+Desvio padrao comparado com exato networkx: 
+[0.16604484598446057, 0.16289213842095052, 0.18873554873067575, 0.19517428185698263, 0.20526209014783722, 0.19740343902451432, 0.21816156200200795, 0.2125985356608273, 0.20381900497211322, 0.19572715131529683]
+Desvio padrao comparado com exato nosso: 
+[0.16617846548824122, 0.16298116178603964, 0.1887852590405505, 0.1952867991046214, 0.20533052854088757, 0.19747092236484276, 0.21818708381511284, 0.21263778421631824, 0.20387858614602533, 0.19580982207375652]
+
+Iteracao: 0
+epsilon: 0.08 ------------------------------------
+r > m, entao r <- m 546
+Numero de amostras eh r = 546
+Total de tempo de execucao do algoritmo de aproximacao: 0.09375
+Quantidade de Zeros = 1
+Media dos coeficientes de clustering local do algoritmo aproximado = 0.99
+
+
+Iteracao: 1
+epsilon: 0.08 ------------------------------------
+r > m, entao r <- m 546
+Numero de amostras eh r = 546
+Total de tempo de execucao do algoritmo de aproximacao: 0.078125
+Quantidade de Zeros = 1
+Media dos coeficientes de clustering local do algoritmo aproximado = 0.938139534883721
+
+
+Iteracao: 2
+epsilon: 0.08 ------------------------------------
+r > m, entao r <- m 546
+Numero de amostras eh r = 546
+Total de tempo de execucao do algoritmo de aproximacao: 0.09375
+Quantidade de Zeros = 1
+Media dos coeficientes de clustering local do algoritmo aproximado = 0.9141860465116279
+
+
+Iteracao: 3
+epsilon: 0.08 ------------------------------------
+r > m, entao r <- m 546
+Numero de amostras eh r = 546
+Total de tempo de execucao do algoritmo de aproximacao: 0.09375
+Quantidade de Zeros = 1
+Media dos coeficientes de clustering local do algoritmo aproximado = 0.8925581395348838
+
+
+Iteracao: 4
+epsilon: 0.08 ------------------------------------
+r > m, entao r <- m 546
+Numero de amostras eh r = 546
+Total de tempo de execucao do algoritmo de aproximacao: 0.09375
+Quantidade de Zeros = 1
+Media dos coeficientes de clustering local do algoritmo aproximado = 0.9090697674418605
+
+
+Iteracao: 5
+epsilon: 0.08 ------------------------------------
+r > m, entao r <- m 546
+Numero de amostras eh r = 546
+Total de tempo de execucao do algoritmo de aproximacao: 0.078125
+Quantidade de Zeros = 2
+Media dos coeficientes de clustering local do algoritmo aproximado = 0.9067441860465116
+
+
+Iteracao: 6
+epsilon: 0.08 ------------------------------------
+r > m, entao r <- m 546
+Numero de amostras eh r = 546
+Total de tempo de execucao do algoritmo de aproximacao: 0.109375
+Quantidade de Zeros = 2
+Media dos coeficientes de clustering local do algoritmo aproximado = 0.8588372093023255
+
+
+Iteracao: 7
+epsilon: 0.08 ------------------------------------
+r > m, entao r <- m 546
+Numero de amostras eh r = 546
+Total de tempo de execucao do algoritmo de aproximacao: 0.09375
+Quantidade de Zeros = 1
+Media dos coeficientes de clustering local do algoritmo aproximado = 0.9130232558139535
+
+
+Iteracao: 8
+epsilon: 0.08 ------------------------------------
+r > m, entao r <- m 546
+Numero de amostras eh r = 546
+Total de tempo de execucao do algoritmo de aproximacao: 0.09375
+Quantidade de Zeros = 2
+Media dos coeficientes de clustering local do algoritmo aproximado = 0.8872093023255814
+
+
+Iteracao: 9
+epsilon: 0.08 ------------------------------------
+r > m, entao r <- m 546
+Numero de amostras eh r = 546
+Total de tempo de execucao do algoritmo de aproximacao: 0.09375
+Quantidade de Zeros = 1
+Media dos coeficientes de clustering local do algoritmo aproximado = 0.9546511627906976
+
+
+
+Tempos de execucao: 
+[0.09375, 0.078125, 0.09375, 0.09375, 0.09375, 0.078125, 0.109375, 0.09375, 0.09375, 0.09375]
+Media de erros comparado com exato networkx: 
+[0.1286248347801236, 0.06113378325482824, 0.10098780520187345, 0.05395662800344854, 0.034474578346649305, 0.09649002300231284, 0.09150272575783366, 0.06972355865895427, 0.09149211577149444, 0.0919720256649342]
+Media de erros comparado com exato nosso: 
+[0.12813953488372093, 0.06046511627906978, 0.1002325581395349, 0.05348837209302326, 0.034186046511627925, 0.09604651162790698, 0.09093023255813953, 0.06976744186046512, 0.09093023255813955, 0.09279069767441861]
+Desvio padrao comparado com exato networkx: 
+[0.6099144753367985, 0.43921281688358454, 0.37779176156110245, 0.33281746961966924, 0.30005778363968133, 0.28928040873625627, 0.2779727480662402, 0.2667067648957584, 0.26214815473094477, 0.2563515297134948]
+Desvio padrao comparado com exato nosso: 
+[0.6100595435964524, 0.4393592679658291, 0.37794689972485274, 0.3329492687456687, 0.30017405658534657, 0.28940569118215254, 0.27809965389628133, 0.2668248435816075, 0.26227934856089585, 0.2564599447437793]
+
+Iteracao: 0
+epsilon: 0.1 ------------------------------------
+r > m, entao r <- m 546
+Numero de amostras eh r = 546
+Total de tempo de execucao do algoritmo de aproximacao: 0.09375
+Quantidade de Zeros = 2
+Media dos coeficientes de clustering local do algoritmo aproximado = 0.8530232558139534
+
+
+Iteracao: 1
+epsilon: 0.1 ------------------------------------
+r > m, entao r <- m 546
+Numero de amostras eh r = 546
+Total de tempo de execucao do algoritmo de aproximacao: 0.09375
+Quantidade de Zeros = 1
+Media dos coeficientes de clustering local do algoritmo aproximado = 0.9013953488372093
+
+
+Iteracao: 2
+epsilon: 0.1 ------------------------------------
+r > m, entao r <- m 546
+Numero de amostras eh r = 546
+Total de tempo de execucao do algoritmo de aproximacao: 0.078125
+Quantidade de Zeros = 2
+Media dos coeficientes de clustering local do algoritmo aproximado = 0.902093023255814
+
+
+Iteracao: 3
+epsilon: 0.1 ------------------------------------
+r > m, entao r <- m 546
+Numero de amostras eh r = 546
+Total de tempo de execucao do algoritmo de aproximacao: 0.09375
+Quantidade de Zeros = 1
+Media dos coeficientes de clustering local do algoritmo aproximado = 0.8955813953488372
+
+
+Iteracao: 4
+epsilon: 0.1 ------------------------------------
+r > m, entao r <- m 546
+Numero de amostras eh r = 546
+Total de tempo de execucao do algoritmo de aproximacao: 0.078125
+Quantidade de Zeros = 1
+Media dos coeficientes de clustering local do algoritmo aproximado = 0.9839534883720931
+
+
+Iteracao: 5
+epsilon: 0.1 ------------------------------------
+r > m, entao r <- m 546
+Numero de amostras eh r = 546
+Total de tempo de execucao do algoritmo de aproximacao: 0.09375
+Quantidade de Zeros = 1
+Media dos coeficientes de clustering local do algoritmo aproximado = 0.9095348837209302
+
+
+Iteracao: 6
+epsilon: 0.1 ------------------------------------
+r > m, entao r <- m 546
+Numero de amostras eh r = 546
+Total de tempo de execucao do algoritmo de aproximacao: 0.078125
+Quantidade de Zeros = 1
+Media dos coeficientes de clustering local do algoritmo aproximado = 0.983720930232558
+
+
+Iteracao: 7
+epsilon: 0.1 ------------------------------------
+r > m, entao r <- m 546
+Numero de amostras eh r = 546
+Total de tempo de execucao do algoritmo de aproximacao: 0.078125
+Quantidade de Zeros = 1
+Media dos coeficientes de clustering local do algoritmo aproximado = 0.9055813953488372
+
+
+Iteracao: 8
+epsilon: 0.1 ------------------------------------
+r > m, entao r <- m 546
+Numero de amostras eh r = 546
+Total de tempo de execucao do algoritmo de aproximacao: 0.09375
+Quantidade de Zeros = 2
+Media dos coeficientes de clustering local do algoritmo aproximado = 0.8667441860465117
+
+
+Iteracao: 9
+epsilon: 0.1 ------------------------------------
+r > m, entao r <- m 546
+Numero de amostras eh r = 546
+Total de tempo de execucao do algoritmo de aproximacao: 0.078125
+Quantidade de Zeros = 1
+Media dos coeficientes de clustering local do algoritmo aproximado = 0.9167441860465116
+
+
+
+Tempos de execucao: 
+[0.09375, 0.09375, 0.078125, 0.09375, 0.078125, 0.09375, 0.078125, 0.078125, 0.09375, 0.078125]
+Media de erros comparado com exato networkx: 
+[0.07869544639788671, 0.03350784697702311, 0.10751445596311225, 0.04492773212401649, 0.12223017843842168, 0.03922398762410237, 0.09580727019035125, 0.06328341157099818, 0.07381508192174095, 0.05306494786416238]
+Media de erros comparado com exato nosso: 
+[0.07813953488372094, 0.033488372093023265, 0.10767441860465116, 0.04441860465116279, 0.12209302325581395, 0.03883720930232559, 0.09581395348837207, 0.06325581395348838, 0.07372093023255814, 0.05255813953488374]
+Desvio padrao comparado com exato networkx: 
+[0.18521430112547616, 0.1416951260595734, 0.18567258489026525, 0.16869345309194864, 0.2561423967592951, 0.23583412236400905, 0.2339828720596197, 0.22842916543537894, 0.22423960175546814, 0.21510660109214275]
+Desvio padrao comparado com exato nosso: 
+[0.18543713880287724, 0.14183225482552242, 0.1857997849232323, 0.16885148952080906, 0.25624872283543665, 0.235958554703787, 0.2340996844017262, 0.22854065852451783, 0.2243366852759016, 0.2152110147873033]
