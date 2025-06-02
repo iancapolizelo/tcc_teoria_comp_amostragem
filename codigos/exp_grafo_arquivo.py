@@ -80,6 +80,7 @@ def main(in_file: str, out_file: str):
     m = G.number_of_edges()
     max_degree = max(G.degree, key=operator.itemgetter(1))[1]
     universalConstant=0.5
+    edges_list = list(G.edges())
 
     with open(out_file, 'w') as f:
         print("###########################################################################################", file=f)
@@ -134,7 +135,7 @@ def main(in_file: str, out_file: str):
                     local_clustering[v] = 0
 
                 t2 = time.process_time()
-                pc_tilde = local_clustering_approximation(G, float(e), float(delta), float(p), f, max_degree, m, universalConstant, local_clustering, t_aprox)
+                pc_tilde = local_clustering_approximation(G, float(e), float(delta), float(p), f, max_degree, m, universalConstant, local_clustering, t_aprox, edges_list)
                 t_medio = time.process_time() - t2
                 print("Total de tempo de execucao do algoritmo de aproximacao: " + str(t_medio), file=f)
                 times.append(t_medio)
@@ -188,7 +189,7 @@ def main(in_file: str, out_file: str):
 ###########################################################################################
 if __name__ == "__main__":
     if len(sys.argv) != 3:
-        sys.exit("Use: python3.7 ./test_clustering <path_to_file> <out_file>")
+        sys.exit("Use: python exp_grafo_arquivo.py <path_to_file> <out_file>")
 
     main(sys.argv[1], sys.argv[2])
 ###########################################################################################

@@ -2,7 +2,7 @@ import networkx as nx
 from math import log, floor, ceil
 import random
 
-def local_clustering_approximation(G: nx.classes.graph.Graph, epsilon: float, delta: float, p: float, f: str, max_degree: int, m: int, universalConstant: float = 0.5, local_clustering: dict = None, t_aprox: dict = None):
+def local_clustering_approximation(G: nx.classes.graph.Graph, epsilon: float, delta: float, p: float, f: str, max_degree: int, m: int, universalConstant: float = 0.5, local_clustering: dict = None, t_aprox: dict = None, edges_list: list = None):
     """
     Approximates the local clustering coefficient of a graph.
 
@@ -23,7 +23,6 @@ def local_clustering_approximation(G: nx.classes.graph.Graph, epsilon: float, de
       print("r > m, entao r <- m " + str(r),file=f)
 
     print("Numero de amostras eh r = " + str(r),file=f)
-    edges_list = list(G.edges())
 
     for i in range(r):
       a, b = random.choice(edges_list)

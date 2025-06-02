@@ -79,6 +79,7 @@ def main(data: str, n_min: int = 10000, n_max: int = 100000, m_min: int = 100000
         m = G.number_of_edges()
         max_degree = max(G.degree, key=operator.itemgetter(1))[1]
         universalConstant=0.5
+        edges_list = list(G.edges())
 
         out_file = "exp_grafo_aleatorio_" + str(i) + "_" + data + ".txt"
 
@@ -137,7 +138,7 @@ def main(data: str, n_min: int = 10000, n_max: int = 100000, m_min: int = 100000
                         local_clustering[v] = 0
 
                     t2 = time.process_time()
-                    pc_tilde = local_clustering_approximation(G, float(e), float(delta), float(p), f, max_degree, m, universalConstant, local_clustering, t_aprox)
+                    pc_tilde = local_clustering_approximation(G, float(e), float(delta), float(p), f, max_degree, m, universalConstant, local_clustering, t_aprox, edges_list)
                     t_medio = time.process_time() - t2
                     print("Total de tempo de execucao do algoritmo de aproximacao: " + str(t_medio), file=f)
                     times.append(t_medio)
@@ -191,8 +192,8 @@ def main(data: str, n_min: int = 10000, n_max: int = 100000, m_min: int = 100000
 ###########################################################################################
 if __name__ == "__main__":
     if len(sys.argv) != 6:
-        print("Uso: python test_clustering.py <dateset_file format YYYYMMDD> <n_min: n minimo de vertices> <n_max: n maximo de vertices> <m_min:n minimo de arestas> <m_max: n maximo de arestas>")
-        print("Exemplo: python test_clustering.py 20231001 10000 100000 500000 1000000")
+        print("Uso: python exp_grafo_aleatorio.py <dateset_file format YYYYMMDD> <n_min: n minimo de vertices> <n_max: n maximo de vertices> <m_min:n minimo de arestas> <m_max: n maximo de arestas>")
+        print("Exemplo: python exp_grafo_aleatorio.py 20231001 10000 100000 500000 1000000")
         sys.exit(1)
 
     main(data=sys.argv[1] if len(sys.argv) > 1 else "nodata",
