@@ -25,17 +25,19 @@ def local_clustering_approximation(G: nx.classes.graph.Graph, epsilon: float, de
       print("r > m, entao r <- m " + str(r),file=f)
 
     print("Numero de amostras eh r = " + str(r),file=f)
+    edges_list = list(G.edges())
 
     for i in range(r):
-      a, b = random.choice(list(G.edges()))
+      a, b = random.choice(edges_list)
 
       for v in G.neighbors(a):
+        grau_v = G.degree(v)
 
         if v in list(G.neighbors(b)):
           t_aprox[v] = t_aprox[v] + (m/r)
 
-        if G.degree(v) > 1:
-          local_clustering[v] = round(((2 * t_aprox[v]) / (G.degree(v) * (G.degree(v) - 1))),2)
+        if grau_v > 1:
+          local_clustering[v] = round(((2 * t_aprox[v]) / (grau_v * (grau_v - 1))),2)
 
     return local_clustering
 
@@ -66,11 +68,12 @@ def local_clustering_exato(G: nx.classes.graph.Graph, f: str):
       a, b = i
 
       for v in G.neighbors(a):
+        grau_v = G.degree(v)
 
         if v in list(G.neighbors(b)):
           t_aprox[v] = t_aprox[v] + 1
 
-        if G.degree(v) > 1:
-          local_clustering[v] = round(((2 * t_aprox[v]) / (G.degree(v) * (G.degree(v) - 1))),2)
+        if grau_v > 1:
+          local_clustering[v] = round(((2 * t_aprox[v]) / (grau_v * (grau_v - 1))),2)
 
     return local_clustering
