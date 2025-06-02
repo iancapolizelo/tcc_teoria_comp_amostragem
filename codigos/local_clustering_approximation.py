@@ -1,8 +1,6 @@
 import networkx as nx
 from math import log, floor, ceil
 import random
-import operator
-import collections
 
 def local_clustering_approximation(G: nx.classes.graph.Graph, epsilon: float, delta: float, p: float, f: str, max_degree: int, m: int, universalConstant: float = 0.5, local_clustering: dict = None, t_aprox: dict = None):
     """

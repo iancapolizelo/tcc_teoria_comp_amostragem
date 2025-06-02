@@ -1,10 +1,7 @@
-import random
 import networkx as nx
 import time
 import os
 import operator
-from random import sample, choice
-from math import log, floor, ceil
 import sys
 from statistics import stdev 
 from local_clustering_approximation import local_clustering_approximation, local_clustering_exato
