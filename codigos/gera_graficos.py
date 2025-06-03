@@ -1,121 +1,128 @@
 import matplotlib.pyplot as plt
-import statistics
 
-# Data
-exact_nx_time = 0.015625
-exact_author_time = 0.015625
-approx_times = [0.125, 0.109375, 0.125, 0.109375, 0.125, 0.125, 0.109375, 0.109375, 0.125, 0.140625]
+# Dados fornecidos
+epsilons = [0.04, 0.06, 0.08, 0.10]
 
-errors_vs_nx = [
-    0.03031540450593572, 0.030055917244290808, 0.027995531976114492,
-    0.02933074523038805, 0.032068833812642826, 0.028542955974642605,
-    0.029454492258303606, 0.029255868993005155, 0.029311283397670137,
-    0.03009880675199087
-]
+# ----------------------------
+# BIO_CE_GN – Tempos de execução
+tempo_bio_nx = [1.7779929339999998] * len(epsilons)
+tempo_bio_nosso = [39.028352913] * len(epsilons)
+tempo_bio_aproximado = [39.5658, 18.8698, 10.6040, 6.7647]
 
-errors_vs_author = [
-    0.030485436893203866, 0.029902912621359214, 0.027864077669902905,
-    0.02902912621359222, 0.03194174757281551, 0.02834951456310678,
-    0.029223300970873802, 0.02912621359223299, 0.02932038834951456,
-    0.029902912621359228
-]
+# ECON – Tempos de execução
+tempo_econ_nx = [93.799679063] * len(epsilons)
+tempo_econ_nosso = [4960.77196532] * len(epsilons)
+tempo_econ_aproximado = [1060.7246, 473.3427, 266.2181, 168.8927]
 
-std_vs_nx = [
-    0.023064611643170755, 0.0233952293211972, 0.022107064242419098,
-    0.023077601230559627, 0.024239075999188057, 0.023751548512240515,
-    0.023462235050159378, 0.02350034875514533, 0.0238090523417482,
-    0.023938395611806763
-]
+# ----------------------------
+# BIO_CE_GN – Coeficientes médios
+coef_bio_nx = [0.19516173753689398] * len(epsilons)
+coef_bio_nosso = [0.18363963963963995] * len(epsilons)
+coef_bio_aproximado = [0.1831303, 0.1866339, 0.1831950, 0.1789785]
 
-std_vs_author = [
-    0.023530482557016896, 0.023786882325749773, 0.022656035120329356,
-    0.023543184359296535, 0.024723670222904247, 0.02423543581141196,
-    0.023896447893233176, 0.023942669534941445, 0.024234299819504604,
-    0.024350798773890944
-]
+# ECON – Coeficientes médios
+coef_econ_nx = [0.49637472151094525] * len(epsilons)
+coef_econ_nosso = [0.5106337579617815] * len(epsilons)
+coef_econ_aproximado = [0.5093815, 0.5111392, 0.5098729, 0.5060557]
 
-runs = list(range(1, 11))
+# ----------------------------
+# BIO_CE_GN – Erros médios
+erro_bio_nx = [0.03475, 0.05071, 0.06674, 0.08030]
+erro_bio_nosso = [0.03436, 0.05055, 0.06640, 0.08026]
 
-# --- Figure 1: Average execution time per algorithm ---
-plt.figure()
-algo_names = ['Exact (NetworkX)', 'Exact (Author)', 'Approx (Mean)']
-times = [exact_nx_time, exact_author_time, statistics.mean(approx_times)]
-plt.bar(algo_names, times)
-plt.ylabel('Execution Time (s)')
-plt.title('Average Execution Time by Algorithm')
-plt.tight_layout()
-plt.show()
+# ECON – Erros médios
+erro_econ_nx = [0.01836, 0.02481, 0.03056, 0.03703]
+erro_econ_nosso = [0.01449, 0.02132, 0.02832, 0.03642]
 
-# --- Figure 2: Execution time of approximate algorithm per run ---
-plt.figure()
-plt.plot(runs, approx_times, marker='o')
-plt.xlabel('Run')
-plt.ylabel('Execution Time (s)')
-plt.title('Approximate Algorithm Execution Time per Run')
-plt.tight_layout()
-plt.show()
+# ----------------------------
+# BIO_CE_GN – Desvios padrão médios
+dp_bio_nx = [0.11580, 0.16139, 0.20988, 0.30493]
+dp_bio_nosso = [0.11582, 0.16158, 0.20996, 0.30496]
 
-# --- Figure 3: Mean error per run ---
-plt.figure()
-plt.plot(runs, errors_vs_nx, marker='o', label='Error vs NetworkX')
-plt.plot(runs, errors_vs_author, marker='s', label='Error vs Author Exact')
-plt.xlabel('Run')
-plt.ylabel('Mean Absolute Error')
-plt.title('Mean Clustering Error per Run')
+# ECON – Desvios padrão médios
+dp_econ_nx = [0.02324, 0.03475, 0.04221, 0.05546]
+dp_econ_nosso = [0.02103, 0.03129, 0.04055, 0.05384]
+
+# -------------------------------------------------------------------
+# 1) Gráfico de comparação de tempos - BIO_CE_GN
+plt.figure(figsize=(8, 5))
+plt.plot(epsilons, tempo_bio_nx, marker='o', color='orange', label='BIO_CE_GN NX (Exato)')
+plt.plot(epsilons, tempo_bio_nosso, marker='o', color='green', label='BIO_CE_GN Nosso (Exato)')
+plt.plot(epsilons, tempo_bio_aproximado, marker='o', color='blue', label='BIO_CE_GN Aproximado')
+plt.xlabel('Epsilon')
+plt.ylabel('Tempo de Execução (s)')
+plt.title('BIO_CE_GN – Comparação de Tempos de Execução')
 plt.legend()
+plt.grid(True)
 plt.tight_layout()
 plt.show()
 
-# --- Figure 4: Standard deviation of error per run ---
-plt.figure()
-plt.plot(runs, std_vs_nx, marker='o', label='Std Dev vs NetworkX')
-plt.plot(runs, std_vs_author, marker='s', label='Std Dev vs Author Exact')
-plt.xlabel('Run')
-plt.ylabel('Standard Deviation')
-plt.title('Error Standard Deviation per Run')
+# 2) Gráfico de comparação de tempos - ECON
+plt.figure(figsize=(8, 5))
+plt.plot(epsilons, tempo_econ_nx, marker='o', color='orange', label='ECON NX (Exato)')
+plt.plot(epsilons, tempo_econ_nosso, marker='o', color='green', label='ECON Nosso (Exato)')
+plt.plot(epsilons, tempo_econ_aproximado, marker='o', color='purple', label='ECON Aproximado')
+plt.xlabel('Epsilon')
+plt.ylabel('Tempo de Execução (s)')
+plt.title('ECON – Comparação de Tempos de Execução')
 plt.legend()
+plt.grid(True)
 plt.tight_layout()
 plt.show()
 
-# --- Figure 5: Mean error per run with reference line 0.04 ---
-plt.figure()
-plt.plot(runs, errors_vs_nx, marker='o', label='Error vs NetworkX')
-plt.plot(runs, errors_vs_author, marker='s', label='Error vs Author Exact')
-plt.hlines(0.04, runs[0], runs[-1], linestyles='--', label='Reference 0.04')
-plt.xlabel('Run')
-plt.ylabel('Mean Absolute Error')
-plt.title('Mean Clustering Error per Run (with 0.04 Reference)')
+# -------------------------------------------------------------------
+# 3) Gráfico de comparação de coeficientes - BIO_CE_GN
+plt.figure(figsize=(8, 5))
+plt.plot(epsilons, coef_bio_nx, marker='o', color='orange', label='BIO_CE_GN NX (Exato)')
+plt.plot(epsilons, coef_bio_nosso, marker='o', color='green', label='BIO_CE_GN Nosso (Exato)')
+plt.plot(epsilons, coef_bio_aproximado, marker='o', color='blue', label='BIO_CE_GN Aproximado')
+plt.xlabel('Epsilon')
+plt.ylabel('Coeficiente de Clustering Local Médio')
+plt.title('BIO_CE_GN – Comparação dos Coeficientes Médios')
 plt.legend()
+plt.grid(True)
 plt.tight_layout()
 plt.show()
 
-# --- Figure 6: Boxplot of approximate execution times ---
-plt.figure()
-plt.boxplot(approx_times, vert=True, labels=['Approx Alg'])
-plt.ylabel('Execution Time (s)')
-plt.title('Distribution of Approximate Algorithm Execution Time')
-plt.tight_layout()
-plt.show()
-
-# --- Figure 7: Histogram of mean errors vs NetworkX ---
-plt.figure()
-plt.hist(errors_vs_nx, bins=5, edgecolor='black')
-plt.xlabel('Mean Absolute Error')
-plt.ylabel('Frequency')
-plt.title('Histogram of Mean Errors (Approx vs NetworkX)')
-plt.axvline(0.04, linestyle='--', label='0.04 Reference')
+# 4) Gráfico de comparação de coeficientes - ECON
+plt.figure(figsize=(8, 5))
+plt.plot(epsilons, coef_econ_nx, marker='o', color='orange', label='ECON NX (Exato)')
+plt.plot(epsilons, coef_econ_nosso, marker='o', color='green', label='ECON Nosso (Exato)')
+plt.plot(epsilons, coef_econ_aproximado, marker='o', color='purple', label='ECON Aproximado')
+plt.xlabel('Epsilon')
+plt.ylabel('Coeficiente de Clustering Local Médio')
+plt.title('ECON – Comparação dos Coeficientes Médios')
 plt.legend()
+plt.grid(True)
 plt.tight_layout()
 plt.show()
 
-# --- Figure 8: Error vs Execution Time scatter plot ---
-mean_errors_vs_nx = errors_vs_nx  # alias for clarity
-plt.figure()
-plt.scatter(approx_times, mean_errors_vs_nx)
-plt.xlabel('Execution Time (s)')
-plt.ylabel('Mean Absolute Error vs NetworkX')
-plt.title('Trade-off: Error vs Execution Time per Run')
-plt.axhline(0.04, linestyle='--', label='0.04 Reference')
+# -------------------------------------------------------------------
+# 5) Erro Médio vs Epsilon (BIO_CE_GN + ECON)
+plt.figure(figsize=(8, 5))
+plt.plot(epsilons, erro_bio_nx, marker='o', color='orange', linestyle='-', label='BIO_CE_GN Erro (vs NX)')
+plt.plot(epsilons, erro_bio_nosso, marker='o', color='green', linestyle='-', label='BIO_CE_GN Erro (vs Nosso)')
+plt.plot(epsilons, erro_econ_nx, marker='s', color='orange', linestyle='--', label='ECON Erro (vs NX)')
+plt.plot(epsilons, erro_econ_nosso, marker='s', color='green', linestyle='--', label='ECON Erro (vs Nosso)')
+plt.xlabel('Epsilon')
+plt.ylabel('Erro Médio')
+plt.title('Erro Médio vs Epsilon (BIO_CE_GN + ECON)')
 plt.legend()
+plt.grid(True)
+plt.tight_layout()
+plt.show()
+
+# -------------------------------------------------------------------
+# 6) Desvio Padrão Médio vs Epsilon (BIO_CE_GN + ECON)
+plt.figure(figsize=(8, 5))
+plt.plot(epsilons, dp_bio_nx, marker='o', color='orange', linestyle='-', label='BIO_CE_GN DP (vs NX)')
+plt.plot(epsilons, dp_bio_nosso, marker='o', color='green', linestyle='-', label='BIO_CE_GN DP (vs Nosso)')
+plt.plot(epsilons, dp_econ_nx, marker='s', color='orange', linestyle='--', label='ECON DP (vs NX)')
+plt.plot(epsilons, dp_econ_nosso, marker='s', color='green', linestyle='--', label='ECON DP (vs Nosso)')
+plt.xlabel('Epsilon')
+plt.ylabel('Desvio Padrão Médio')
+plt.title('Desvio Padrão Médio vs Epsilon (BIO_CE_GN + ECON)')
+plt.legend()
+plt.grid(True)
 plt.tight_layout()
 plt.show()
