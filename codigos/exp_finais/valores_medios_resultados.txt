@@ -1,0 +1,494 @@
+Valores médios para cada grafo:
+
+-----------------------------------------------------------------------------------
+
+BIO_CE_GN:
+
+Valores dos algoritmos exatos:
+NetworkX:
+Tempo de execução: 1.7779929339999998
+Coeficiente médio = 0.19516173753689398
+
+Nosso:
+Tempo de execução: 39.028352913
+Coeficiente médio = 0.18363963963963995
+
+-----
+
+Valores do algoritmo aproximado:
+
+Epsilon: 0.04
+Coeficientes:
+0.18308558558558538  
+0.1825405405405406  
+0.18211261261261288  
+0.18765315315315304  
+0.17989639639639637  
+0.18207207207207224  
+0.18731981981981974  
+0.18613513513513547  
+0.18307207207207174  
+0.17741441441441444  
+
+Média dos coeficientes: 0.1831303
+Média dos tempos de execução: 39.5658
+Média dos erros (networkx): 0.03475
+Média dos erros (nosso): 0.03436
+Média dos desvios padrão (networkx): 0.11580
+Média dos desvios padrão (nosso): 0.11582
+------
+Epsilon: 0.06
+Coeficientes:
+0.18568918918918914  
+0.1805045045045047  
+0.19467117117117144  
+0.1805720720720725  
+0.19030180180180187  
+0.18869369369369376  
+0.18298648648648655  
+0.1960180180180186  
+0.17930630630630665  
+0.18759459459459488  
+
+Média dos coeficientes: 0.1866339
+Média dos tempos de execução: 18.8698
+Média dos erros (networkx): 0.05071
+Média dos erros (nosso): 0.05055
+Média dos desvios padrão (networkx): 0.16139
+Média dos desvios padrão (nosso): 0.16158
+------
+Epsilon: 0.08
+Coeficientes:
+0.17337387387387393  
+0.19282432432432456  
+0.17411711711711714  
+0.18473423423423474  
+0.1934909909909913  
+0.1780765765765768  
+0.1882522522522525  
+0.18038288288288312  
+0.1782297297297299  
+0.18746846846846862  
+
+Média dos coeficientes:0.1831950
+Média dos tempos de execução: 10.6040
+Média dos erros (networkx): 0.06674
+Média dos erros (nosso): 0.06640
+Média dos desvios padrão (networkx): 0.20988
+Média dos desvios padrão (nosso): 0.20996
+------
+Epsilon: 0.1
+Coeficientes:
+0.17213963963963955  
+0.21020720720720693  
+0.1839099099099099  
+0.17292342342342293  
+0.17970270270270255  
+0.1720945945945946  
+0.19620720720720716  
+0.18804504504504488  
+0.16359009009008987  
+0.17096396396396396  
+
+Média dos coeficientes:0.1789785
+Média dos tempos de execução: 6.7647
+Média dos erros (networkx): 0.08030
+Média dos erros (nosso): 0.08026
+Média dos desvios padrão (networkx): 0.30493
+Média dos desvios padrão (nosso): 0.30496
+
+-----------------------------------------------------------------------------------
+
+ECON:
+
+Valores dos algoritmos exatos:
+NetworkX:
+Tempo de execução: 93.799679063
+Coeficiente médio = 0.49637472151094525
+
+Nosso:
+Tempo de execução: 4960.77196532
+Coeficiente médio = 0.5106337579617815
+
+-----
+
+Valores do algoritmo aproximado:
+
+Epsilon: 0.04
+Coeficientes:
+0.509305732484076  
+0.5095286624203811  
+0.5134999999999992  
+0.5045445859872605  
+0.5122802547770691  
+0.5090318471337567  
+0.5145350318471312  
+0.511264331210189  
+0.5051019108280246  
+0.504722929936305  
+
+Média dos coeficientes: 0.5093815
+Média dos tempos de execução: 1060.7246
+Média dos erros (networkx): 0.01836
+Média dos erros (nosso): 0.01449
+Média dos desvios padrão (networkx): 0.02324
+Média dos desvios padrão (nosso): 0.02103
+
+-----
+Epsilon: 0.06
+Coeficientes:
+0.5068343949044579  
+0.5128248407643294  
+0.5103980891719735  
+0.5073439490445846  
+0.5190955414012717  
+0.5140382165605084  
+0.5085191082802537  
+0.5103312101910831  
+0.5094999999999996  
+0.5125063694267497  
+
+Média dos coeficientes: 0.5111392
+Média dos tempos de execução: 473.3427
+Média dos erros (networkx): 0.02481
+Média dos erros (nosso): 0.02132
+Média dos desvios padrão (networkx): 0.03475
+Média dos desvios padrão (nosso): 0.03129
+
+-----
+Epsilon: 0.08
+Coeficientes:
+0.5069936305732473  
+0.5066082802547769  
+0.5105509554140122  
+0.5076528662420375  
+0.5147261146496785  
+0.5105382165605091  
+0.505621019108281  
+0.5200573248407623  
+0.5087738853503179  
+0.5072070063694274  
+
+Média dos coeficientes: 0.5098729
+Média dos tempos de execução: 266.2181
+Média dos erros (networkx): 0.03056
+Média dos erros (nosso): 0.02832
+Média dos desvios padrão (networkx): 0.04221
+Média dos desvios padrão (nosso): 0.04055
+
+-----
+Epsilon: 0.10
+Coeficientes:
+0.5037675159235674  
+0.5099777070063686  
+0.5092961783439482  
+0.5062356687898093  
+0.5035159235668804  
+0.5155987261146493  
+0.5022356687898084  
+0.5050541401273889  
+0.5020509554140128  
+0.5028248407643322  
+
+Média dos coeficientes: 0.5060557
+Média dos tempos de execução: 168.8927
+Média dos erros (networkx): 0.03703
+Média dos erros (nosso): 0.03642
+Média dos desvios padrão (networkx): 0.05546
+Média dos desvios padrão (nosso): 0.05384
+
+-----------------------------------------------------------------------------------
+
+CAIDA:
+
+Valores dos algoritmos exatos:
+
+NetworkX:
+Tempo de execução: 9.4877
+Coeficiente médio = 0.2020549
+
+Nosso:
+Tempo de execução: 136.5918
+Coeficiente médio = 0.1582255
+
+-----
+Valores do algoritmo aproximado:
+
+Epsilon: 0.04
+
+Coeficientes:
+0.1566735  
+0.1628319  
+0.1585420  
+0.1551405  
+0.1613337  
+0.1531003  
+0.1590413  
+0.1613096  
+0.1594071  
+0.1581255  
+
+Média dos coeficientes: 0.1585978
+Média dos tempos de execução: 20.9661
+Média dos erros (networkx): 0.2132494
+Média dos erros (nosso): 0.2132640
+Média dos desvios padrão (networkx): 0.6726889
+Média dos desvios padrão (nosso): 0.6726821
+
+-----
+Epsilon: 0.06
+
+Coeficientes:
+0.1597345  
+0.1572330  
+0.1581905  
+0.1605950  
+0.1589076  
+0.1576646  
+0.1669276  
+0.1633688  
+0.1625867  
+0.1692808  
+
+Média dos coeficientes: 0.1605787
+Média dos tempos de execução: 9.3272
+Média dos erros (networkx): 0.2561518
+Média dos erros (nosso): 0.2561877
+Média dos desvios padrão (networkx): 1.0356586
+Média dos desvios padrão (nosso): 1.0356499
+
+-----
+Epsilon: 0.08
+
+Coeficientes:
+0.1570145  
+0.1524661  
+0.1633927  
+0.1509621  
+0.1565670  
+0.1596535  
+0.1436482  
+0.1615234  
+0.1553273  
+0.1504234  
+
+Média dos coeficientes: 0.1556172
+Média dos tempos de execução: 5.4710
+Média dos erros (networkx): 0.2711537
+Média dos erros (nosso): 0.2711988
+Média dos desvios padrão (networkx): 1.3545228
+Média dos desvios padrão (nosso): 1.3545159
+
+-----
+Epsilon: 0.10
+
+Coeficientes:
+0.1556541  
+0.1670743  
+0.1639436  
+0.1661805  
+0.1539006  
+0.1577939  
+0.1575209  
+0.1543675  
+0.1632162  
+0.1636292  
+
+Média dos coeficientes: 0.1599613
+Média dos tempos de execução: 3.7462
+Média dos erros (networkx): 0.2877582
+Média dos erros (nosso): 0.2878033
+Média dos desvios padrão (networkx): 1.7805094
+Média dos desvios padrão (nosso): 1.7805041
+
+-----------------------------------------------------------------------------------
+
+SCNASA:
+Valores dos algoritmos exatos:
+NetworkX:
+Tempo de execução: 23.999927291
+Coeficiente médio = 0.563362195018157
+
+Nosso:
+Tempo de execução: 261.730300325
+Coeficiente médio = 0.5636059777659237
+
+-----
+
+Valores do algoritmo aproximado:
+Epsilon: 0.04
+Coeficientes:
+0.5634984508839112
+0.5629803171131766
+0.5627339165299873
+0.5639917987971584
+0.5646338618552967
+0.5635766356843444
+0.5647566976489899
+0.5634355749954458
+0.5634076909057754
+0.5634144341170039
+
+Média dos coeficientes:0.5636429
+Média dos tempos de execução: 15.7387
+Média dos erros (networkx): 0.08393
+Média dos erros (nosso): 0.08388
+Média dos desvios padrão (networkx): 0.07072
+Média dos desvios padrão (nosso): 0.07083
+------
+Epsilon: 0.06
+Coeficientes:
+0.5635095680699655
+0.5649285584107677
+0.5633737926006678
+0.5646190996901499
+0.5654005831966314
+0.5627501366866955
+0.5623892837615964
+0.5624738472753623
+0.5642259887005474
+0.5634093311463279
+
+Média dos coeficientes:0.5637080
+Média dos tempos de execução: 6.8487
+Média dos erros (networkx): 0.12645
+Média dos erros (nosso): 0.12637
+Média dos desvios padrão (networkx): 0.10667
+Média dos desvios padrão (nosso): 0.10678
+------
+Epsilon: 0.08
+Coeficientes:
+0.5603479132494995
+0.5637002004738413
+0.5629604519774066
+0.5611888099143447
+0.5618516493530117
+0.5675139420448311
+0.5651995626025191
+0.5642154182613475
+0.5641603790778298
+0.5618383451795239
+
+Média dos coeficientes:0.5632977
+Média dos tempos de execução: 3.8163
+Média dos erros (networkx): 0.16847
+Média dos erros (nosso): 0.16859
+Média dos desvios padrão (networkx): 0.14224
+Média dos desvios padrão (nosso): 0.14223
+------
+Epsilon: 0.1
+Coeficientes:
+0.5606220156733153
+0.5631441589209922
+0.5638913796244758
+0.5636416985601471
+0.5642491343173774
+0.5626141789683755
+0.5616457080370876
+0.5633867322761984
+0.5653468197556962
+0.5626240204117953
+
+Média dos coeficientes:0.5631166
+Média dos tempos de execução: 2.4449
+Média dos erros (networkx): 0.21088
+Média dos erros (nosso): 0.21105
+Média dos desvios padrão (networkx): 0.17679
+Média dos desvios padrão (nosso): 0.17666
+------
+
+--------------------------------------------------------------------------------
+
+SHIPSEC5:
+Valores dos algoritmos exatos:
+NetworkX:
+Tempo de execução: 28.643871069
+Coeficiente médio = 0.3573640025997936
+
+Nosso:
+Tempo de execução: 236.16684603
+Coeficiente médio = 0.35753322092185175
+
+-----
+
+Valores do algoritmo aproximado:
+Epsilon: 0.04
+Coeficientes:
+0.3568661783098346
+0.3583835090227182
+0.3595229028944303
+0.3583017688047424
+0.3560632928354718
+0.3569823677863391
+0.3554387395033289
+0.3576358428622813
+0.3572914061104418
+0.3535861845631781
+
+Média dos coeficientes:0.3570072
+Média dos tempos de execução: 7.1952
+Média dos erros (networkx): 0.22646
+Média dos erros (nosso): 0.22656
+Média dos desvios padrão (networkx): 0.25556
+Média dos desvios padrão (nosso): 0.25557
+------
+Epsilon: 0.06
+Coeficientes:
+0.3578663234768483
+0.3576422078792154
+0.3591345810255362
+0.3575274700732418
+0.3584280641414965
+0.3613374910666353
+0.3591261501697293
+0.3571226214936485
+0.3582520211720488
+0.3581387908701020
+
+Média dos coeficientes:0.3584576
+Média dos tempos de execução: 3.1331
+Média dos erros (networkx): 0.32369
+Média dos erros (nosso): 0.32320
+Média dos desvios padrão (networkx): 0.39645
+Média dos desvios padrão (nosso): 0.39667
+------
+Epsilon: 0.08
+Coeficientes:
+0.3568018581382947
+0.3579674379131751
+0.3522580176880560
+0.3551852554940163
+0.3558629064677573
+0.3599517040378787
+0.3611403430409215
+0.3567267621047003
+0.3602743098981606
+0.3532119885653098
+
+Média dos coeficientes:0.3569381
+Média dos tempos de execução: 1.7634
+Média dos erros (networkx): 0.40115
+Média dos erros (nosso): 0.40109
+Média dos desvios padrão (networkx): 0.54985
+Média dos desvios padrão (nosso): 0.54994
+------
+Epsilon: 0.1
+Coeficientes:
+0.3599618098981419
+0.3608024388064868
+0.3598083236555092
+0.3535656378416843
+0.3600020658388225
+0.3573003953010341
+0.3584668125781447
+0.3601176969805075
+0.3587688717169679
+0.3594009067357287
+
+Média dos coeficientes:0.3588195
+Média dos tempos de execução: 1.1100
+Média dos erros (networkx): 0.46887
+Média dos erros (nosso): 0.46877
+Média dos desvios padrão (networkx): 0.69421
+Média dos desvios padrão (nosso): 0.69431
+------
