@@ -1,10 +1,11 @@
 Valores médios para cada grafo:
-
+|p{5cm}|c|p{5cm}|
 -----------------------------------------------------------------------------------
 
 BIO_CE_GN:
 
 Valores dos algoritmos exatos:
+
 NetworkX:
 Tempo de execução: 1.7779929339999998
 Coeficiente médio = 0.19516173753689398
@@ -32,6 +33,11 @@ Coeficientes:
 
 Média dos coeficientes: 0.1831303
 Média dos tempos de execução: 39.5658
+Média dos erros (networkx): 0.01203
+Média dos erros (nosso): 0.00051
+Desvio padrão dos coeficientes: 0.00304
+
+Erros do script:
 Média dos erros (networkx): 0.03475
 Média dos erros (nosso): 0.03436
 Média dos desvios padrão (networkx): 0.11580
@@ -52,6 +58,11 @@ Coeficientes:
 
 Média dos coeficientes: 0.1866339
 Média dos tempos de execução: 18.8698
+Média dos erros (networkx): 0.00853
+Média dos erros (nosso): 0.00299
+Desvio padrão dos coeficientes: 0.00560
+
+Erros do script:
 Média dos erros (networkx): 0.05071
 Média dos erros (nosso): 0.05055
 Média dos desvios padrão (networkx): 0.16139
@@ -72,6 +83,11 @@ Coeficientes:
 
 Média dos coeficientes:0.1831950
 Média dos tempos de execução: 10.6040
+Média dos erros (networkx): 0.01207
+Média dos erros (nosso): 0.00054
+Desvio padrão dos coeficientes: 0.00695
+
+Erros do script:
 Média dos erros (networkx): 0.06674
 Média dos erros (nosso): 0.06640
 Média dos desvios padrão (networkx): 0.20988
@@ -92,16 +108,29 @@ Coeficientes:
 
 Média dos coeficientes:0.1789785
 Média dos tempos de execução: 6.7647
+Média dos erros (networkx): 0.01418
+Média dos erros (nosso): 0.00266
+Desvio padrão dos coeficientes: 0.01331
+
+Erros do script:
 Média dos erros (networkx): 0.08030
 Média dos erros (nosso): 0.08026
 Média dos desvios padrão (networkx): 0.30493
 Média dos desvios padrão (nosso): 0.30496
+------
+Síntese das 40 execuções:
+
+Média dos coeficientes: 0.183459
+Desvio padrão dos valores dos coeficientes: 0.008403
+Erro comparando a média dos coeficientes aproximados com a média do coeficiente exato networkX: 0.011702
+Erro comparando a média dos coeficientes aproximados com a média do coeficiente exato nosso: 0.000180
 
 -----------------------------------------------------------------------------------
 
 ECON:
 
 Valores dos algoritmos exatos:
+
 NetworkX:
 Tempo de execução: 93.799679063
 Coeficiente médio = 0.49637472151094525
@@ -129,6 +158,11 @@ Coeficientes:
 
 Média dos coeficientes: 0.5093815
 Média dos tempos de execução: 1060.7246
+Média dos erros (networkx): 0.01301
+Média dos erros (nosso): 0.00125
+Desvio padrão dos coeficientes: 0.00345
+
+Erros do script:
 Média dos erros (networkx): 0.01836
 Média dos erros (nosso): 0.01449
 Média dos desvios padrão (networkx): 0.02324
@@ -150,6 +184,11 @@ Coeficientes:
 
 Média dos coeficientes: 0.5111392
 Média dos tempos de execução: 473.3427
+Média dos erros (networkx): 0.01476
+Média dos erros (nosso): 0.00051
+Desvio padrão dos coeficientes: 0.00347
+
+Erro do script:
 Média dos erros (networkx): 0.02481
 Média dos erros (nosso): 0.02132
 Média dos desvios padrão (networkx): 0.03475
@@ -171,6 +210,11 @@ Coeficientes:
 
 Média dos coeficientes: 0.5098729
 Média dos tempos de execução: 266.2181
+Média dos erros (networkx): 0.01350
+Média dos erros (nosso): 0.00076
+Desvio padrão dos coeficientes: 0.00422
+
+Erro do scripts:
 Média dos erros (networkx): 0.03056
 Média dos erros (nosso): 0.02832
 Média dos desvios padrão (networkx): 0.04221
@@ -192,10 +236,22 @@ Coeficientes:
 
 Média dos coeficientes: 0.5060557
 Média dos tempos de execução: 168.8927
+Média dos erros (networkx): 0.00968
+Média dos erros (nosso): 0.00458
+Desvio padrão dos coeficientes: 0.00413
+
+Erros do script:
 Média dos erros (networkx): 0.03703
 Média dos erros (nosso): 0.03642
 Média dos desvios padrão (networkx): 0.05546
 Média dos desvios padrão (nosso): 0.05384
+-----
+Síntese das 40 execuções:
+
+Média dos coeficientes: 0.509112
+Desvio padrão dos valores dos coeficientes: 0.004270
+Erro comparando a média dos coeficientes aproximados com a média do coeficiente exato networkX: 0.012738
+Erro comparando a média dos coeficientes aproximados com a média do coeficiente exato nosso: 0.001521
 
 -----------------------------------------------------------------------------------
 
@@ -230,6 +286,11 @@ Coeficientes:
 
 Média dos coeficientes: 0.1585978
 Média dos tempos de execução: 20.9661
+Média dos erros (networkx): 0.04350
+Média dos erros (nosso): 0.00033
+Desvio padrão dos coeficientes: 0.00282
+
+Erros do script:
 Média dos erros (networkx): 0.2132494
 Média dos erros (nosso): 0.2132640
 Média dos desvios padrão (networkx): 0.6726889
@@ -252,6 +313,11 @@ Coeficientes:
 
 Média dos coeficientes: 0.1605787
 Média dos tempos de execução: 9.3272
+Média dos erros (networkx): 0.04061
+Média dos erros (nosso): 0.00322
+Desvio padrão dos coeficientes: 0.00386
+
+Erros do script:
 Média dos erros (networkx): 0.2561518
 Média dos erros (nosso): 0.2561877
 Média dos desvios padrão (networkx): 1.0356586
@@ -274,6 +340,12 @@ Coeficientes:
 
 Média dos coeficientes: 0.1556172
 Média dos tempos de execução: 5.4710
+Média dos erros (networkx): 0.04696
+Média dos erros (nosso): 0.00313
+Desvio padrão dos coeficientes: 0.00560
+
+
+Erros do script:
 Média dos erros (networkx): 0.2711537
 Média dos erros (nosso): 0.2711988
 Média dos desvios padrão (networkx): 1.3545228
@@ -296,11 +368,22 @@ Coeficientes:
 
 Média dos coeficientes: 0.1599613
 Média dos tempos de execução: 3.7462
+Média dos erros (networkx): 0.04173
+Média dos erros (nosso): 0.00210
+Desvio padrão dos coeficientes: 0.00474
+
+Erros do script:
 Média dos erros (networkx): 0.2877582
 Média dos erros (nosso): 0.2878033
 Média dos desvios padrão (networkx): 1.7805094
 Média dos desvios padrão (nosso): 1.7805041
+-----
+Síntese das 40 execuções:
 
+Média dos coeficientes: 0.158856
+Desvio padrão dos valores dos coeficientes: 0.004997
+Erro comparando a média dos coeficientes aproximados com a média do coeficiente exato networkX: 0.043199
+Erro comparando a média dos coeficientes aproximados com a média do coeficiente exato nosso: 0.000631
 -----------------------------------------------------------------------------------
 
 SCNASA:
@@ -331,6 +414,11 @@ Coeficientes:
 
 Média dos coeficientes:0.5636429
 Média dos tempos de execução: 15.7387
+Média dos erros (networkx): 0.00028
+Média dos erros (nosso): 0.00004
+Desvio padrão dos coeficientes: 0.0006
+
+Erros do script:
 Média dos erros (networkx): 0.08393
 Média dos erros (nosso): 0.08388
 Média dos desvios padrão (networkx): 0.07072
@@ -351,6 +439,11 @@ Coeficientes:
 
 Média dos coeficientes:0.5637080
 Média dos tempos de execução: 6.8487
+Média dos erros (networkx): 0.00035
+Média dos erros (nosso): 0.00010
+Desvio padrão dos coeficientes: 0.0010
+
+Erros do script:
 Média dos erros (networkx): 0.12645
 Média dos erros (nosso): 0.12637
 Média dos desvios padrão (networkx): 0.10667
@@ -371,6 +464,11 @@ Coeficientes:
 
 Média dos coeficientes:0.5632977
 Média dos tempos de execução: 3.8163
+Média dos erros (networkx): 0.00006
+Média dos erros (nosso): 0.00031
+Desvio padrão dos coeficientes: 0.0020
+
+Erros do script:
 Média dos erros (networkx): 0.16847
 Média dos erros (nosso): 0.16859
 Média dos desvios padrão (networkx): 0.14224
@@ -391,12 +489,22 @@ Coeficientes:
 
 Média dos coeficientes:0.5631166
 Média dos tempos de execução: 2.4449
+Média dos erros (networkx): 0.00025
+Média dos erros (nosso): 0.00049
+Desvio padrão dos coeficientes: 0.0013
+
+Erros do script:
 Média dos erros (networkx): 0.21088
 Média dos erros (nosso): 0.21105
 Média dos desvios padrão (networkx): 0.17679
 Média dos desvios padrão (nosso): 0.17666
 ------
+Síntese das 40 execuções:
 
+Média dos coeficientes: 0.563441
+Desvio padrão dos valores dos coeficientes: 0.001349
+Erro comparando a média dos coeficientes aproximados com a média do coeficiente exato networkX: 0.000079
+Erro comparando a média dos coeficientes aproximados com a média do coeficiente exato nosso: 0.000165
 --------------------------------------------------------------------------------
 
 SHIPSEC5:
@@ -427,6 +535,11 @@ Coeficientes:
 
 Média dos coeficientes:0.3570072
 Média dos tempos de execução: 7.1952
+Média dos erros (networkx): 0.00036
+Média dos erros (nosso): 0.00053
+Desvio padrão dos coeficientes: 0.0016
+
+Erros do script:
 Média dos erros (networkx): 0.22646
 Média dos erros (nosso): 0.22656
 Média dos desvios padrão (networkx): 0.25556
@@ -447,6 +560,11 @@ Coeficientes:
 
 Média dos coeficientes:0.3584576
 Média dos tempos de execução: 3.1331
+Média dos erros (networkx): 0.00109
+Média dos erros (nosso): 0.00092
+Desvio padrão dos coeficientes: 0.00114
+
+Erros do script:
 Média dos erros (networkx): 0.32369
 Média dos erros (nosso): 0.32320
 Média dos desvios padrão (networkx): 0.39645
@@ -467,6 +585,11 @@ Coeficientes:
 
 Média dos coeficientes:0.3569381
 Média dos tempos de execução: 1.7634
+Média dos erros (networkx): 0.00043
+Média dos erros (nosso): 0.00060
+Desvio padrão dos coeficientes: 0.0028
+
+Erros do script:
 Média dos erros (networkx): 0.40115
 Média dos erros (nosso): 0.40109
 Média dos desvios padrão (networkx): 0.54985
@@ -487,8 +610,19 @@ Coeficientes:
 
 Média dos coeficientes:0.3588195
 Média dos tempos de execução: 1.1100
+Média dos erros (networkx): 0.0005
+Média dos erros (nosso): 0.0004
+Desvio padrão dos coeficientes: 0.0021
+
+Erros do script:
 Média dos erros (networkx): 0.46887
 Média dos erros (nosso): 0.46877
 Média dos desvios padrão (networkx): 0.69421
 Média dos desvios padrão (nosso): 0.69431
 ------
+Síntese das 40 execuções:
+
+Média dos coeficientes: 0.357806
+Desvio padrão dos valores dos coeficientes: 0.002154
+Erro comparando a média dos coeficientes aproximados com a média do coeficiente exato networkX: 0.000442
+Erro comparando a média dos coeficientes aproximados com a média do coeficiente exato nosso: 0.000272
